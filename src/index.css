@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #285780;
+  --color-brand-navy: #143651;
+  --color-brand-teal: #00b0b9;
+  --color-brand-ink: #193c55;
+  --color-brand-muted: #657886;
+  --color-brand-paper: #f6f5f1;
+  --color-brand-border: #dce4e8;
+  --font-raleway: 'Raleway', sans-serif;
+}
+
+:root {
+  --blue: #285780;
+  --navy: #143651;
+  --teal: #00b0b9;
+  --ink: #193c55;
+  --muted: #657886;
+  --paper: #f6f5f1;
+  --border: #dce4e8;
+  --font: 'Raleway', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: var(--font);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+
+.shell {
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .shell {
+    width: min(1200px, calc(100% - 96px));
+  }
+}
+
+/* Custom focus styles */
+button:focus-visible,
+a:focus-visible,
+summary:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 3px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
