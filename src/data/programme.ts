@@ -21,8 +21,8 @@ export const programmeData: ProgrammeData = {
     {
       "id": "d1-s3",
       "time": "13:00\u201315:30",
-      "title": "European cultural perspectives",
-      "description": "An introduction to European cultural life. This afternoon session may take place beyond the classroom.",
+      "title": "European Cultural, Social, Business and Professional orientation",
+      "description": "An introduction to European cultural, social, business and professional life in Central Europe. This afternoon session provides essential orientation beyond the traditional classroom.",
       "category": "learning",
       "tentative": false
     },
@@ -55,8 +55,8 @@ export const programmeData: ProgrammeData = {
     {
       "id": "d2-s3",
       "time": "13:00\u201317:30",
-      "title": "European perspectives, Balatonf\u00fcred & lake cruise",
-      "description": "13:00\u201314:00: European cultural perspectives at an outdoor location or on the coach. Continue to Tagore Promenade, a one-hour sightseeing cruise and free time. Sailing depends on weather and the timetable.",
+      "title": "European Cultural, Social, Business and Professional orientation, Balatonfüred and lake cruise",
+      "description": "13:00\u201314:00: European Cultural, Social, Business and Professional orientation at an outdoor location or en route. Continue to Tagore Promenade, a one-hour sightseeing cruise and free time. Sailing depends on weather and the timetable.",
       "category": "culture",
       "tentative": false
     },
@@ -395,9 +395,9 @@ export const programmeData: ProgrammeData = {
     {
       "id": "d12-s1",
       "time": "08:45\u201312:00",
-      "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "category": "academic",
+      "title": "Free time & personal exploration",
+      "description": "Enjoy free time in Veszprém to rest, explore local historic streets and cafes, shop for souvenirs, or prepare for the afternoon orientation.",
+      "category": "culture",
       "tentative": false
     },
     {
@@ -411,9 +411,9 @@ export const programmeData: ProgrammeData = {
     {
       "id": "d12-s3",
       "time": "13:00\u201315:30",
-      "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      "category": "academic",
+      "title": "European Cultural, Social, Business and Professional orientation",
+      "description": "Deepen your understanding of European professional practices, cross-cultural collaboration, and career perspectives in Central Europe.",
+      "category": "learning",
       "tentative": false
     },
     {
