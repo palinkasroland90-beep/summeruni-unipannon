@@ -6,6 +6,12 @@ interface AcademicsProps {
   onJumpToDay: (dayNumber: number) => void;
 }
 
+const facultyBgColors: Record<'gtk' | 'mik' | 'mk', string> = {
+  gtk: '#272945',
+  mk: '#7F2A21',
+  mik: '#671C90',
+};
+
 export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
   const [activeFacultyKey, setActiveFacultyKey] = useState<'gtk' | 'mik' | 'mk'>('gtk');
   const faculty = facultiesData[activeFacultyKey];
@@ -61,14 +67,10 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
         {/* Faculty Display Panel */}
         <div className="grid grid-cols-1 lg:grid-cols-12 border-x border-b border-[#dce4e8] rounded-b-sm overflow-hidden shadow-sm">
           {/* Visual Left Banner */}
-          <div className="lg:col-span-5 bg-[#285780] text-white p-8 sm:p-12 relative flex flex-col justify-between overflow-hidden min-h-[320px]">
-            {/* SVG Background Art */}
-            <svg
-              className="absolute right-[-40px] top-[-20px] w-[340px] h-[340px] stroke-white/20 fill-none stroke-[1.5] pointer-events-none"
-              viewBox="0 0 300 300"
-              dangerouslySetInnerHTML={{ __html: faculty.art }}
-            />
-
+          <div
+            className="lg:col-span-5 text-white p-8 sm:p-12 relative flex flex-col justify-between overflow-hidden min-h-[320px] transition-colors duration-300"
+            style={{ backgroundColor: facultyBgColors[activeFacultyKey] }}
+          >
             <div className="relative z-10">
               <span className="text-6xl sm:text-7xl font-bold tracking-tight block mb-2 opacity-95">
                 {faculty.code}
