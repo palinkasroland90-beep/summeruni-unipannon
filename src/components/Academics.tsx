@@ -50,19 +50,13 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
               <button
                 key={key}
                 onClick={() => setActiveFacultyKey(key)}
-                className={`py-4 sm:py-5 px-3 sm:px-6 text-left transition-all relative border-b-2 ${
+                className={`py-4 sm:py-5 px-3 sm:px-6 flex items-center justify-center text-center transition-all relative border-b-2 ${
                   isActive
                     ? 'bg-white text-[#285780] font-bold border-[#00b0b9] shadow-sm'
-                    : 'text-[#657886] hover:bg-white/60 border-transparent'
+                    : 'text-[#657886] hover:bg-white/60 border-transparent font-semibold'
                 }`}
               >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-sm sm:text-base font-bold">{f.code}</span>
-                  <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">
-                    {key.toUpperCase()}
-                  </span>
-                </div>
-                <span className="hidden md:block text-xs font-normal text-slate-500 truncate mt-0.5">
+                <span className="text-xs sm:text-sm md:text-base leading-snug block">
                   {f.name}
                 </span>
               </button>
