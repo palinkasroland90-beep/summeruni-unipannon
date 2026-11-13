@@ -12,6 +12,12 @@ const facultyBgColors: Record<'gtk' | 'mik' | 'mk', string> = {
   mik: '#671C90',
 };
 
+const facultyLogos: Record<'gtk' | 'mik' | 'mk', string> = {
+  gtk: '/images/gtk-logo.svg',
+  mik: '/images/mik-logo.svg',
+  mk: '/images/mk-logo.svg',
+};
+
 export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
   const [activeFacultyKey, setActiveFacultyKey] = useState<'gtk' | 'mik' | 'mk'>('gtk');
   const faculty = facultiesData[activeFacultyKey];
@@ -72,9 +78,11 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
             style={{ backgroundColor: facultyBgColors[activeFacultyKey] }}
           >
             <div className="relative z-10">
-              <span className="text-6xl sm:text-7xl font-bold tracking-tight block mb-2 opacity-95">
-                {faculty.code}
-              </span>
+              <img
+                src={facultyLogos[activeFacultyKey]}
+                alt={`${faculty.code} - ${faculty.name}`}
+                className="h-20 sm:h-24 w-auto object-contain object-left mb-4"
+              />
               <span className="text-xs uppercase font-bold tracking-widest text-[#00b0b9] block">
                 Pannon Faculty Division
               </span>
