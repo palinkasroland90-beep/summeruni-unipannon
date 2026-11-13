@@ -81,11 +81,8 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
               <img
                 src={facultyLogos[activeFacultyKey]}
                 alt={`${faculty.code} - ${faculty.name}`}
-                className="h-20 sm:h-24 w-auto object-contain object-left mb-4"
+                className="h-20 sm:h-24 w-auto object-contain object-left"
               />
-              <span className="text-xs uppercase font-bold tracking-widest text-[#00b0b9] block">
-                Pannon Faculty Division
-              </span>
             </div>
 
             <div className="relative z-10 pt-12">
