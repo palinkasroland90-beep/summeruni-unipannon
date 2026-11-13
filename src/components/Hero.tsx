@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `linear-gradient(90deg, rgba(11, 39, 61, 0.94) 0%, rgba(11, 39, 61, 0.85) 45%, rgba(11, 39, 61, 0.35) 100%), url('/images/download.jpeg')`,
+          backgroundImage: `linear-gradient(90deg, rgba(11, 39, 61, 0.94) 0%, rgba(11, 39, 61, 0.85) 45%, rgba(11, 39, 61, 0.35) 100%), url('/images/hero-balaton.webp')`,
         }}
         aria-hidden="true"
       />
