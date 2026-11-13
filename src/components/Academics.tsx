@@ -77,6 +77,13 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
             className="lg:col-span-5 text-white p-8 sm:p-12 relative flex flex-col justify-between overflow-hidden min-h-[320px] transition-colors duration-300"
             style={{ backgroundColor: facultyBgColors[activeFacultyKey] }}
           >
+            {/* SVG Background Art */}
+            <svg
+              className="absolute right-[-40px] top-[-20px] w-[340px] h-[340px] stroke-white/20 fill-none stroke-[1.5] pointer-events-none"
+              viewBox="0 0 300 300"
+              dangerouslySetInnerHTML={{ __html: faculty.art }}
+            />
+
             <div className="relative z-10">
               <img
                 src={facultyLogos[activeFacultyKey]}
