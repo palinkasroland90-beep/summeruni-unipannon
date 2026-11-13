@@ -79,7 +79,7 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
           >
             {/* SVG Background Art */}
             <svg
-              className="absolute right-[-40px] top-[-20px] w-[340px] h-[340px] stroke-white/20 fill-none stroke-[1.5] pointer-events-none"
+              className="absolute right-[-20px] bottom-[-25px] w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] stroke-white/20 fill-none stroke-[1.5] pointer-events-none"
               viewBox="0 0 300 300"
               dangerouslySetInnerHTML={{ __html: faculty.art }}
             />
