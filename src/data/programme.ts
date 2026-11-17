@@ -74,7 +74,7 @@ export const programmeData: ProgrammeData = {
       "id": "d3-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Entrepreneurial Mindset & Idea Generation (trends, opportunities & evaluation). \u00b7 MIK: Fundamentals of Multimedia (text, image, audio, video & authoring tools). \u00b7 MK: Introduction to Materials Science (classification, smart materials & circular economy).",
       "category": "academic",
       "tentative": false
     },
@@ -90,7 +90,7 @@ export const programmeData: ProgrammeData = {
       "id": "d3-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Team Building & Entrepreneurial Collaboration (complementary competencies & founder roles). \u00b7 HTK: Breaking the Ice \u2013 Let\u2019s Get Talking! (speed chatting, pair interviews & sharing photos from Veszpr\u00e9m, Tihany & Balatonf\u00fcred).",
       "category": "academic",
       "tentative": false
     },
@@ -108,7 +108,7 @@ export const programmeData: ProgrammeData = {
       "id": "d4-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Market Research & Customer Discovery (target segments, interviews & competitor analysis). \u00b7 MIK: Human Visual & Auditory Perception (optical/acoustic illusions & sensory design). \u00b7 MK: States of Matter & Material Properties I (amorphous/crystalline solids & optical/electrical/magnetic traits).",
       "category": "academic",
       "tentative": false
     },
@@ -124,7 +124,7 @@ export const programmeData: ProgrammeData = {
       "id": "d4-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Value Proposition & Business Model Canvas (solving customer problems & revenue/partner logic). \u00b7 HTK: Speak Naturally! \u2013 Pronunciation & Everyday English (rhythm, role-plays & Culture Bingo for the Street Music Festival).",
       "category": "academic",
       "tentative": false
     },
@@ -139,8 +139,8 @@ export const programmeData: ProgrammeData = {
     {
       "id": "d4-s5",
       "time": "18:00 onwards",
-      "title": "Roz\u00e9\u2013Rizling cultural evening & language activities",
-      "description": "An optional cultural evening with language activities. The 2027 event and date are subject to confirmation.",
+      "title": "Street Music Festival & language activities",
+      "description": "An optional visit to the Veszpr\u00e9m Street Music Festival with interactive language activities. The 2027 event and timing are subject to confirmation.",
       "category": "optional",
       "tentative": true
     }
@@ -150,7 +150,7 @@ export const programmeData: ProgrammeData = {
       "id": "d5-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Customer-Centred Product & Service Design (user experience & sustainability). \u00b7 MIK: Digital Image Creation & Properties (pixels, resolution, colour depth & colour models). \u00b7 MK: Material Properties II & Metals I (mechanical/thermal traits & fundamentals of metallurgy).",
       "category": "academic",
       "tentative": false
     },
@@ -166,25 +166,25 @@ export const programmeData: ProgrammeData = {
       "id": "d5-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Prototyping & Market Testing (building an MVP & iterating from user feedback). \u00b7 HTK: Tell Your Story! \u2013 Fluency & Storytelling (story cubes, expressing opinions & cultural excursion reflections).",
       "category": "academic",
       "tentative": false
     },
     {
       "id": "d5-s4",
-      "time": "17:30\u201318:30",
-      "title": "Shared dinner",
-      "description": "Enjoy dinner together in Veszpr\u00e9m.",
-      "category": "meal",
+      "time": "15:45\u201318:15",
+      "title": "Cistercian Abbey of Zirc excursion & language activities",
+      "description": "An optional afternoon bus excursion to the historic Cistercian Abbey of Zirc, paired with guided English language activities.",
+      "category": "optional",
       "tentative": false
     },
     {
       "id": "d5-s5",
-      "time": "19:00 onwards",
-      "title": "Veszpr\u00e9mFest & language activities",
-      "description": "An optional festival visit with language activities. The 2027 dates, line-up and ticket availability are subject to confirmation. A free evening is the alternative.",
-      "category": "optional",
-      "tentative": true
+      "time": "18:30\u201319:30",
+      "title": "Shared dinner",
+      "description": "Enjoy dinner together in Veszpr\u00e9m upon returning from Zirc.",
+      "category": "meal",
+      "tentative": false
     }
   ],
   "6": [
@@ -260,7 +260,7 @@ export const programmeData: ProgrammeData = {
       "id": "d8-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Marketing Strategy & Brand Building (positioning, key messages, channels & KPIs). \u00b7 MIK: Image Editing Functions & Algorithms (cropping, geometric transforms, colour correction & filtering). \u00b7 MK: Metals II & Plastics (steels, cast irons, non-ferrous/special alloys, polymers & recycling).",
       "category": "academic",
       "tentative": false
     },
@@ -276,7 +276,7 @@ export const programmeData: ProgrammeData = {
       "id": "d8-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Go-to-Market & Sales Planning (sales channels, partnerships & international scaling). \u00b7 HTK: Across Cultures \u2013 Intercultural Communication (cultural quizzes, Herend/Folk Night reflections & Conversation Passport prep).",
       "category": "academic",
       "tentative": false
     },
@@ -294,7 +294,7 @@ export const programmeData: ProgrammeData = {
       "id": "d9-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Pricing & Financial Planning (startup/operating costs, cash flow & break-even analysis). \u00b7 MIK: Media Creation with Generative AI (prompt engineering, AI media tools, capabilities & limits). \u00b7 MK: Elastomers & Inorganic Non-Metals I (rubber recycling, ceramics, glasses & binders).",
       "category": "academic",
       "tentative": false
     },
@@ -310,7 +310,7 @@ export const programmeData: ProgrammeData = {
       "id": "d9-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Financing & Investor Readiness (comparing grants, loans, bootstrapping & equity investment). \u00b7 HTK: Think Fast, Speak Freely! \u2013 Spontaneous Communication (improvisation, Taboo & Balaton Uplands Photo Mission briefing).",
       "category": "academic",
       "tentative": false
     },
@@ -328,7 +328,7 @@ export const programmeData: ProgrammeData = {
       "id": "d10-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Company Setup & Operations (legal forms, IP protection, launch roadmap & risk plan). \u00b7 MIK: Practical Multimedia Project & Quiz (digital image editing, generative AI & interactive quiz). \u00b7 MK: Inorganic Non-Metals II & Composites (ceramics, glasses, binders, matrices & disperse phases).",
       "category": "academic",
       "tentative": false
     },
@@ -344,17 +344,17 @@ export const programmeData: ProgrammeData = {
       "id": "d10-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "description": "GTK: Business Plan & Final Pitch (summarizing the venture concept & persuasive team presentation with feedback). \u00b7 HTK: Speak with Confidence! \u2013 The Great English Challenge (multi-station team challenge & My Hungarian Experience final talks).",
       "category": "academic",
       "tentative": false
     },
     {
       "id": "d10-s4",
       "time": "17:00 onwards",
-      "title": "Street Music Festival & language activities",
-      "description": "An optional visit to the Street Music Festival with dinner and language activities. The 2027 event and timing are subject to confirmation.",
+      "title": "Downtown community & board game evening with dinner",
+      "description": "An optional downtown community gathering and board game evening in Veszpr\u00e9m, featuring a shared dinner and interactive language activities.",
       "category": "optional",
-      "tentative": true
+      "tentative": false
     }
   ],
   "11": [

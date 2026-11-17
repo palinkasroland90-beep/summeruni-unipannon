@@ -130,34 +130,34 @@ export const cultureDiscoveries: DiscoveryItem[] = [
 export const optionalActivities: DiscoveryItem[] = [
   {
     id: 'opt-1',
-    title: 'Rozé–Rizling Cultural Evening',
-    desc: 'Relaxed evening celebration of regional culture, gastronomy and casual English-Hungarian-Chinese language exchange.',
-    longDesc: 'Unwind after Thursday’s academic lectures at an optional evening inspired by Veszprém’s beloved Rozé–Rizling summer festival atmosphere. Held in a lively open-air setting in the heart of town, the evening blends regional music, local summer refreshments, and street-food flavours with informal English–Hungarian–Chinese language exchange games. It is a great opportunity to practise a few everyday Hungarian phrases, chat with local students in a relaxed setting, and enjoy the warm July evening. Exact 2027 festival dates and venue details are subject to confirmation.',
+    title: 'Street Music Festival Evening',
+    desc: 'Dozens of acoustic acts filling the cobblestone squares of Veszprém with lively summer energy.',
+    longDesc: 'Discover Veszprém at its most vibrant during an optional Thursday evening visit to the famous Veszprém Street Music Festival atmosphere. Cobblestone squares, shaded courtyards, and historic alleys come alive with acoustic bands, solo performers, and spontaneous street performances spanning jazz, folk, indie, and world music. Participants explore the stages alongside playful intercultural language challenges and Culture Bingo prompts practised earlier in the afternoon. Exact 2027 festival schedules and performance timings are subject to final confirmation.',
     day: 4,
-    art: 'wine',
+    art: 'music',
     color: 'gold',
     sessionIds: ['d4-s5'],
-    image: '/images/experiences/opt-1.webp',
+    image: '/images/experiences/opt-5.webp',
     imageCredit: {
-      author: 'Susanne Nilsson',
+      author: 'Szelcsányi Nóra (Nóra)',
       license: 'CC BY-SA 2.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Wine_(30364021026).jpg'
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9mi_utcazenei_fesztiv%C3%A1l.jpg'
     }
   },
   {
     id: 'opt-2',
-    title: 'VeszprémFest & Music Night',
-    desc: 'World-class open-air music festival in the castle district paired with international student activities.',
-    longDesc: 'Experience the magic of Veszprém’s flagship summer cultural festival with an optional evening outing to VeszprémFest. Set against historic architectural backdrops in the city, the festival brings acclaimed international and Hungarian performers to intimate open-air stages. Alongside the concert atmosphere, participants can join light-hearted intercultural language activities with fellow students, or opt for a quiet free evening in town if preferred. As the 2027 concert line-up, exact dates, and group ticket availability are finalized closer to summer, full details will be confirmed ahead of arrival.',
+    title: 'Cistercian Abbey of Zirc Excursion',
+    desc: 'An afternoon bus trip into the Bakony Hills to explore the historic Cistercian Abbey and gardens.',
+    longDesc: 'Head north into the cool green hills of the Bakony Mountains on an optional Friday afternoon bus excursion to Zirc, Hungary’s highest town. Visit the monumental Cistercian Abbey of Zirc—founded in the 12th century and renowned for its baroque basilica, historic library heritage, and tranquil English-style arboretum. Paired with interactive English language missions prepared during the afternoon HTK workshop, the trip blends Central European monastic history with scenic mountain air before returning to Veszprém in time for a shared dinner.',
     day: 5,
-    art: 'music',
+    art: 'castle',
     color: 'gold',
-    sessionIds: ['d5-s5'],
-    image: '/images/experiences/opt-2.webp',
+    sessionIds: ['d5-s4'],
+    image: '/images/experiences/opt-zirc.webp',
     imageCredit: {
-      author: 'Veszprembalaton2023',
+      author: 'Rlevente',
       license: 'CC BY-SA 4.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9mFest_2021,_koncert.jpg'
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Abbey_of_Zirc_001.JPG'
     }
   },
   {
@@ -194,19 +194,14 @@ export const optionalActivities: DiscoveryItem[] = [
   },
   {
     id: 'opt-5',
-    title: 'Street Music Festival Evening',
-    desc: 'Dozens of acoustic acts filling the cobblestone squares of Veszprém with lively summer energy.',
-    longDesc: 'Discover Veszprém at its most vibrant during an optional evening visit to the famous Veszprém Street Music Festival atmosphere. Cobblestone squares, shaded courtyards, and historic alleys come alive with acoustic bands, solo performers, and spontaneous street performances spanning jazz, folk, indie, and world music. Participants enjoy a shared dinner in town alongside playful intercultural language challenges while strolling from stage to stage. Exact 2027 festival schedules and performance timings are subject to final confirmation.',
+    title: 'Downtown Community & Board Game Evening',
+    desc: 'Relaxed mid-week gathering in Veszprém’s city centre with board games, shared dinner, and language fun.',
+    longDesc: 'Wrap up Wednesday’s academic milestones with a cheerful, low-pressure community and board game evening in downtown Veszprém. International participants and local student hosts gather over a shared dinner to play classic strategy, party, and communication games—making it effortless to practise everyday English in a playful social setting. Whether you team up for quick word challenges or unwind over a longer tabletop match, the evening offers genuine camaraderie and a welcoming mid-week pause in the heart of town.',
     day: 10,
-    art: 'music',
+    art: 'people',
     color: 'gold',
     sessionIds: ['d10-s4'],
-    image: '/images/experiences/opt-5.webp',
-    imageCredit: {
-      author: 'Szelcsányi Nóra (Nóra)',
-      license: 'CC BY-SA 2.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9mi_utcazenei_fesztiv%C3%A1l.jpg'
-    }
+    image: '/images/experiences/opt-boardgame.webp'
   },
   {
     id: 'opt-6',
