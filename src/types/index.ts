@@ -35,6 +35,7 @@ export interface DiscoveryItem {
   id: string;
   title: string;
   desc: string;
+  longDesc?: string;
   day: number;
   art: string;
   color: 'blue' | 'teal' | 'sand' | 'green' | 'gold';

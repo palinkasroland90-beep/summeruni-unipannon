@@ -17,6 +17,7 @@ import { programmeData, weekdays, dayDates, dayThemes, categoryLabels } from './
 
 export const App: React.FC = () => {
   const [selectedSession, setSelectedSession] = useState<Session | null>(null);
+  const [selectedExperience, setSelectedExperience] = useState<DiscoveryItem | null>(null);
   const [selectedSessionDay, setSelectedSessionDay] = useState<number>(1);
   const [targetAgendaDay, setTargetAgendaDay] = useState<number>(1);
   const [surveyModalKind, setSurveyModalKind] = useState<'programme' | 'academic' | null>(null);
@@ -53,6 +54,7 @@ export const App: React.FC = () => {
   };
 
   const handleSelectSession = (session: Session, dayNumber: number) => {
+    setSelectedExperience(null);
     setSelectedSession(session);
     setSelectedSessionDay(dayNumber);
   };
@@ -70,6 +72,7 @@ export const App: React.FC = () => {
       daySessions.find((s) => item.sessionIds.includes(s.id)) || daySessions[0];
 
     if (matchedSession) {
+      setSelectedExperience(item);
       setSelectedSession(matchedSession);
       setSelectedSessionDay(item.day);
     } else {
@@ -178,9 +181,13 @@ ${eventLines}`;
       {/* Session Details Modal Dialog */}
       <SessionDetailModal
         session={selectedSession}
+        experience={selectedExperience}
         dayNumber={selectedSessionDay}
         isOpen={!!selectedSession}
-        onClose={() => setSelectedSession(null)}
+        onClose={() => {
+          setSelectedSession(null);
+          setSelectedExperience(null);
+        }}
         onJumpToDay={handleJumpToDay}
       />
 
