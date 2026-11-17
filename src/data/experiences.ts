@@ -20,7 +20,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 1,
     art: 'city',
     color: 'blue',
-    sessionIds: ['d1-s1', 'd1-s4']
+    sessionIds: ['d1-s1', 'd1-s4'],
+    image: '/images/experiences/disc-1.webp',
+    imageCredit: {
+      author: 'Csendesmark',
+      license: 'CC BY 4.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9m_panorama.jpg'
+    }
   },
   {
     id: 'disc-2',
@@ -29,7 +35,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 2,
     art: 'lake',
     color: 'teal',
-    sessionIds: ['d2-s1', 'd2-s2', 'd2-s3']
+    sessionIds: ['d2-s1', 'd2-s2', 'd2-s3'],
+    image: '/images/experiences/disc-2.webp',
+    imageCredit: {
+      author: 'Lukke',
+      license: 'CC BY-SA 3.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tihany_Abbey_Balaton_panorama_at_sunset.jpg'
+    }
   },
   {
     id: 'disc-3',
@@ -38,7 +50,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 6,
     art: 'porcelain',
     color: 'blue',
-    sessionIds: ['d6-s1']
+    sessionIds: ['d6-s1'],
+    image: '/images/experiences/disc-3.webp',
+    imageCredit: {
+      author: 'Davidi Vardi',
+      license: 'CC BY-SA 4.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Herend_Porcelain_Maker.jpg'
+    }
   },
   {
     id: 'disc-4',
@@ -47,7 +65,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 6,
     art: 'wine',
     color: 'teal',
-    sessionIds: ['d6-s4']
+    sessionIds: ['d6-s4'],
+    image: '/images/experiences/disc-4.webp',
+    imageCredit: {
+      author: 'm.louis',
+      license: 'CC BY-SA 2.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Hungarian_Guly%C3%A1s.jpg'
+    }
   },
   {
     id: 'disc-5',
@@ -56,7 +80,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 7,
     art: 'nature',
     color: 'blue',
-    sessionIds: ['d7-s1']
+    sessionIds: ['d7-s1'],
+    image: '/images/experiences/disc-5.webp',
+    imageCredit: {
+      author: 'Emőke Dénes',
+      license: 'CC BY-SA 4.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Em_-_Giraffa_camelopardalis_rothschildi_-_5.jpg'
+    }
   },
   {
     id: 'disc-6',
@@ -65,7 +95,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 11,
     art: 'cave',
     color: 'teal',
-    sessionIds: ['d11-s1', 'd11-s3']
+    sessionIds: ['d11-s1', 'd11-s3'],
+    image: '/images/experiences/disc-6.webp',
+    imageCredit: {
+      author: 'Shaambo.ghosh',
+      license: 'CC BY-SA 3.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Cave,Tapolca_1.jpg'
+    }
   },
   {
     id: 'disc-7',
@@ -74,7 +110,13 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     day: 13,
     art: 'city',
     color: 'blue',
-    sessionIds: ['d13-s1', 'd13-s3', 'd13-s4']
+    sessionIds: ['d13-s1', 'd13-s3', 'd13-s4'],
+    image: '/images/experiences/disc-7.webp',
+    imageCredit: {
+      author: 'Shahzeb.ali55',
+      license: 'CC BY-SA 4.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Hungarian_parliament_light_trails.jpg'
+    }
   }
 ];
 
@@ -86,7 +128,13 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 4,
     art: 'wine',
     color: 'gold',
-    sessionIds: ['d4-s4']
+    sessionIds: ['d4-s4'],
+    image: '/images/experiences/opt-1.webp',
+    imageCredit: {
+      author: 'Susanne Nilsson',
+      license: 'CC BY-SA 2.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Wine_(30364021026).jpg'
+    }
   },
   {
     id: 'opt-2',
@@ -95,7 +143,13 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 5,
     art: 'music',
     color: 'gold',
-    sessionIds: ['d5-s4']
+    sessionIds: ['d5-s4'],
+    image: '/images/experiences/opt-2.webp',
+    imageCredit: {
+      author: 'Veszprembalaton2023',
+      license: 'CC BY-SA 4.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9mFest_2021,_koncert.jpg'
+    }
   },
   {
     id: 'opt-3',
@@ -104,7 +158,13 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 8,
     art: 'people',
     color: 'gold',
-    sessionIds: ['d8-s4']
+    sessionIds: ['d8-s4'],
+    image: '/images/experiences/opt-3.webp',
+    imageCredit: {
+      author: 'Emcc83',
+      license: 'CC BY-SA 4.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Jiaozi_GS_CN.jpg'
+    }
   },
   {
     id: 'opt-4',
@@ -113,7 +173,13 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 9,
     art: 'nature',
     color: 'gold',
-    sessionIds: ['d9-s4']
+    sessionIds: ['d9-s4'],
+    image: '/images/experiences/opt-4.webp',
+    imageCredit: {
+      author: 'Ramessos',
+      license: 'CC BY-SA 3.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:BadacsonyPanorama01.jpg'
+    }
   },
   {
     id: 'opt-5',
@@ -122,7 +188,13 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 10,
     art: 'music',
     color: 'gold',
-    sessionIds: ['d10-s4']
+    sessionIds: ['d10-s4'],
+    image: '/images/experiences/opt-5.webp',
+    imageCredit: {
+      author: 'Szelcsányi Nóra (Nóra)',
+      license: 'CC BY-SA 2.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9mi_utcazenei_fesztiv%C3%A1l.jpg'
+    }
   },
   {
     id: 'opt-6',
@@ -140,6 +212,12 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 14,
     art: 'city',
     color: 'gold',
-    sessionIds: ['d14-s4']
+    sessionIds: ['d14-s4'],
+    image: '/images/experiences/opt-7.webp',
+    imageCredit: {
+      author: 'Globetrotter19',
+      license: 'CC BY-SA 3.0',
+      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9m_2016,_view_from_S%C3%A9d_Valley_to_the_Seminary.jpg'
+    }
   }
 ];

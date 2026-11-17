@@ -39,6 +39,12 @@ export interface DiscoveryItem {
   art: string;
   color: 'blue' | 'teal' | 'sand' | 'green' | 'gold';
   sessionIds: string[];
+  image?: string;
+  imageCredit?: {
+    author: string;
+    license: string;
+    sourceUrl: string;
+  };
 }
 
 export interface SurveyState {
