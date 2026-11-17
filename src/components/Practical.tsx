@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { dailyRhythm, faqList } from '../data/practical';
-import { Plus, Minus, Clock } from 'lucide-react';
+import { faqList } from '../data/practical';
+import { Plus, Minus } from 'lucide-react';
 
 export const Practical: React.FC = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -10,10 +10,10 @@ export const Practical: React.FC = () => {
   };
 
   return (
-    <section id="practical" className="py-20 md:py-28 bg-white border-b border-[#dce4e8]">
+    <section id="practical" className="py-20 md:py-28 bg-[#f6f5f1] border-b border-[#dce4e8]">
       <div className="shell">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Campus Community Photo & Daily Rhythm */}
+          {/* Left Column: Campus Community Photo */}
           <div className="lg:col-span-5 space-y-8">
             <div className="relative rounded-sm overflow-hidden shadow-md group">
               <img
@@ -30,32 +30,6 @@ export const Practical: React.FC = () => {
                     International students engaging in active campus life at the University of Pannonia.
                   </p>
                 </div>
-              </div>
-            </div>
-
-            {/* Daily Schedule Rhythm Card */}
-            <div className="bg-[#f6f5f1] border border-[#dce4e8] p-6 sm:p-7 rounded-sm">
-              <div className="flex items-center gap-2 mb-4 text-[#285780]">
-                <Clock className="w-4 h-4 text-[#00b0b9]" />
-                <h3 className="text-sm font-bold uppercase tracking-wider text-[#143651]">
-                  Typical Daily Rhythm
-                </h3>
-              </div>
-
-              <div className="space-y-4">
-                {dailyRhythm.map((slot, i) => (
-                  <div key={i} className="border-b border-[#dce4e8] last:border-0 pb-3 last:pb-0">
-                    <div className="flex items-center justify-between text-xs mb-1">
-                      <strong className="text-[#143651] font-bold">{slot.label}</strong>
-                      <span className="text-[#285780] font-mono text-[11px] font-semibold">
-                        {slot.time}
-                      </span>
-                    </div>
-                    <p className="text-[11px] text-[#657886] leading-relaxed">
-                      {slot.desc}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

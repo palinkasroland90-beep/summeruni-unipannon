@@ -9,6 +9,26 @@ export interface ScheduleSlot {
   desc: string;
 }
 
+export interface HungarianDish {
+  id: string;
+  name: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  prepTime: string;
+  servings: string;
+  ingredients: string[];
+  steps: string[];
+}
+
+export interface AccommodationOption {
+  name: string;
+  location: string;
+  category: string;
+  description: string;
+  url?: string;
+}
+
 export const dailyRhythm: ScheduleSlot[] = [
   {
     time: '08:45 – 12:00',
@@ -52,5 +72,131 @@ export const faqList: FAQItem[] = [
   {
     question: 'Where will students be accommodated?',
     answer: 'Students stay in modern, secure university dormitory accommodation in Veszprém, within walking distance of the historic city centre, faculty lecture halls, and campus amenities.'
+  }
+];
+
+export const hungarianDishes: HungarianDish[] = [
+  {
+    id: 'gulyas',
+    name: 'Gulyásleves',
+    subtitle: 'Traditional Hungarian Goulash',
+    description: 'Slow-simmered beef soup seasoned with sweet Hungarian paprika, caraway, root vegetables, and potatoes.',
+    image: '/images/experiences/disc-4.webp',
+    prepTime: '90 mins',
+    servings: '4 servings',
+    ingredients: [
+      '600 g beef chuck, cut into 2 cm cubes',
+      '2 large onions, finely diced',
+      '2 tbsp sweet Hungarian paprika',
+      '2 carrots & 1 parsnip, sliced',
+      '3 medium potatoes, cubed',
+      '1 tsp caraway seeds, 2 cloves garlic, salt & pepper',
+      '2 tbsp sunflower oil or lard, 1.8 L water or beef stock'
+    ],
+    steps: [
+      'Sauté the diced onions in oil until translucent, then remove from heat and stir in the sweet paprika so it does not burn.',
+      'Return to medium heat, add the beef cubes, garlic, caraway seeds, and salt, and sear until browned.',
+      'Pour in water or stock, cover, and simmer gently for 50–60 minutes until the beef is nearly tender.',
+      'Add the carrots, parsnip, and potatoes, and cook for another 20–25 minutes until all vegetables are soft. Serve hot with crusty bread.'
+    ]
+  },
+  {
+    id: 'langos',
+    name: 'Lángos',
+    subtitle: 'Crispy Balaton Street Flatbread',
+    description: 'Golden, airy deep-fried yeast dough brushed with garlic oil and topped with sour cream and grated cheese.',
+    image: '/images/dishes/langos.webp',
+    prepTime: '55 mins',
+    servings: '4–6 pieces',
+    ingredients: [
+      '500 g all-purpose flour',
+      '25 g fresh yeast (or 7 g instant dry yeast)',
+      '150 ml lukewarm milk + 150 ml lukewarm water',
+      '1 tsp sugar, 1.5 tsp salt',
+      'Oil for deep frying',
+      'Toppings: 2 cloves crushed garlic in 2 tbsp oil, sour cream (tejföl), grated Edam or Trappista cheese'
+    ],
+    steps: [
+      'Dissolve the yeast and sugar in lukewarm milk, then knead with flour, water, and salt into a soft, slightly sticky dough.',
+      'Cover and let the dough rise in a warm place for 35–40 minutes until doubled in size.',
+      'Divide into oiled balls, gently stretch each into a thin disc (thinner in the centre, thicker at the rim), and fry in hot oil (180 °C) for 1–2 minutes per side until golden.',
+      'Drain on paper towels, brush lightly with garlic oil, spread generously with sour cream, and finish with grated cheese.'
+    ]
+  },
+  {
+    id: 'paprikas',
+    name: 'Paprikás Csirke',
+    subtitle: 'Chicken Paprikash with Nokedli',
+    description: 'Tender chicken braised in a velvety sweet paprika and sour cream sauce, traditionally paired with egg dumplings.',
+    image: '/images/dishes/paprikash.webp',
+    prepTime: '50 mins',
+    servings: '4 servings',
+    ingredients: [
+      '800 g bone-in chicken thighs or drumsticks',
+      '2 onions, finely chopped & 1 yellow pepper, diced',
+      '2 tbsp sweet Hungarian paprika',
+      '200 g sour cream (tejföl) + 1 tbsp flour',
+      '250 ml chicken stock, 2 tbsp oil, salt',
+      'Side: 300 g flour, 2 eggs, 150 ml water for nokedli dumplings'
+    ],
+    steps: [
+      'Sweat the chopped onions in oil until golden, remove from heat, and stir in the sweet paprika.',
+      'Add the chicken pieces, diced pepper, salt, and stock. Cover and simmer on low heat for 30–35 minutes until tender.',
+      'Whisk the sour cream with 1 tbsp flour and a ladle of hot sauce, then stir it back into the pan and simmer for 3 minutes until glossy.',
+      'Meanwhile, whisk flour, eggs, water, and a pinch of salt into a thick batter, drop small spoonfuls into boiling salted water, and serve the dumplings alongside the chicken.'
+    ]
+  },
+  {
+    id: 'kurtoskalacs',
+    name: 'Kürtőskalács',
+    subtitle: 'Caramelized Chimney Cake',
+    description: 'Sweet yeast dough ribbon spiralled around a wooden cylinder, roasted over embers until crisp and glazed with cinnamon sugar.',
+    image: '/images/dishes/kurtoskalacs.webp',
+    prepTime: '75 mins',
+    servings: '4 cakes',
+    ingredients: [
+      '500 g all-purpose flour',
+      '20 g fresh yeast, 250 ml lukewarm milk',
+      '60 g melted butter, 50 g sugar, 1 egg + 1 egg yolk',
+      'Pinch of salt, grated zest of 1/2 lemon',
+      'Coating: melted butter, 100 g granulated sugar mixed with 2 tsp ground cinnamon'
+    ],
+    steps: [
+      'Activate the yeast in warm milk with a pinch of sugar, then knead with flour, egg, yolk, butter, sugar, salt, and lemon zest into a smooth dough. Let rise for 45 minutes.',
+      'Roll the dough out and cut into 2 cm wide strips, then wrap them in an overlapping spiral around oiled baking cylinders or rolling pins.',
+      'Brush the wrapped dough with melted butter and roll in cinnamon sugar.',
+      'Bake at 200 °C (turning every 4–5 minutes) for 15–18 minutes until the sugar caramelizes into a crisp golden shell.'
+    ]
+  }
+];
+
+export const recommendedAccommodations: AccommodationOption[] = [
+  {
+    name: 'Betekints Hotel Veszprém',
+    location: 'Veszprém · Séd Valley',
+    category: 'Wellness & Boutique',
+    description: 'Peaceful valley hotel beside the Séd stream, minutes from the Veszprém Zoo and a scenic walk from the historic Castle District.',
+    url: 'https://betekints.hu'
+  },
+  {
+    name: 'Hotel História',
+    location: 'Veszprém · City Centre',
+    category: 'Historic Boutique',
+    description: 'Four-star boutique hotel and renowned Historante restaurant nestled directly beneath the Veszprém Castle walls.',
+    url: 'https://hotelhistoria.hu'
+  },
+  {
+    name: 'Hotel Magister',
+    location: 'Veszprém · University Campus',
+    category: 'University Residence',
+    description: 'The University of Pannonia’s modern campus residence and hotel (József Attila u. 34/2.), within easy walking distance of lecture halls.',
+    url: 'https://uni-pannon.hu'
+  },
+  {
+    name: 'Hotel Marina-Port',
+    location: 'Balatonkenese · Lake Balaton',
+    category: 'Lakeside Resort',
+    description: 'Waterfront hotel directly on the northeastern shore of Lake Balaton, featuring private lakeside gardens and wellness facilities.',
+    url: 'https://www.hotelmarinaport.hu'
   }
 ];

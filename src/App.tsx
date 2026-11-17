@@ -5,6 +5,7 @@ import { Intro } from './components/Intro';
 import { Programme } from './components/Programme';
 import { Academics } from './components/Academics';
 import { Experiences } from './components/Experiences';
+import { DailyEssentials } from './components/DailyEssentials';
 import { Practical } from './components/Practical';
 import { Surveys } from './components/Surveys';
 import { Footer } from './components/Footer';
@@ -156,6 +157,9 @@ ${eventLines}`;
           onSelectExperience={handleSelectExperience}
           onJumpToDay={handleJumpToDay}
         />
+
+        {/* Daily Rhythm, Hungarian Dishes & Recommended Accommodation */}
+        <DailyEssentials />
 
         {/* Campus Life & Practical FAQs */}
         <Practical />
