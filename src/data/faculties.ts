@@ -63,5 +63,26 @@ export const facultiesData: Record<string, Faculty> = {
       }
     ],
     art: '<circle cx="205" cy="155" r="80"/><path d="M205 45v30M205 235v30M95 155h30M285 155h30M127 77l21 21M263 213l21 21M127 233l21-21M263 97l21-21"/><circle cx="205" cy="155" r="40"/>'
+  },
+  htk: {
+    code: 'HTK',
+    name: 'Faculty of Humanities',
+    text: 'Explore Central European cultural heritage, linguistics, intercultural communication, and the human dimensions of global collaboration.',
+    meta: ['Intercultural Communication', 'Central European Heritage', 'Language & Society'],
+    features: [
+      {
+        title: 'Cultural Heritage',
+        description: 'Exploring Hungarian history, literature, and Central European identity in a global context.'
+      },
+      {
+        title: 'Intercultural Studies',
+        description: 'Developing cross-cultural competence, multilingual awareness, and collaborative dialogue.'
+      },
+      {
+        title: 'Applied Humanities',
+        description: 'Connecting philosophical inquiry, social understanding, and modern communication practices.'
+      }
+    ],
+    art: '<path d="M125 90c25 0 55 10 80 25 25-15 55-25 80-25v120c-25 0-55 10-80 25-25-15-55-25-80-25V90z"/><path d="M205 115v120"/><circle cx="205" cy="88" r="22"/><path d="M148 132c15 2 30 7 42 14M148 162c15 2 30 7 42 14M262 132c-15 2-30 7-42 14M262 162c-15 2-30 7-42 14"/>'
   }
 };

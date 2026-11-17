@@ -6,20 +6,24 @@ interface AcademicsProps {
   onJumpToDay: (dayNumber: number) => void;
 }
 
-const facultyBgColors: Record<'gtk' | 'mik' | 'mk', string> = {
+type FacultyKey = 'gtk' | 'mik' | 'mk' | 'htk';
+
+const facultyBgColors: Record<FacultyKey, string> = {
   gtk: '#272945',
-  mk: '#7F2A21',
-  mik: '#671C90',
+  mik: '#72308C',
+  mk: '#8A221B',
+  htk: '#D03635',
 };
 
-const facultyLogos: Record<'gtk' | 'mik' | 'mk', string> = {
+const facultyLogos: Record<FacultyKey, string> = {
   gtk: '/images/gtk-logo.svg',
   mik: '/images/mik-logo.svg',
   mk: '/images/mk-logo.svg',
+  htk: '/images/htk-logo.png',
 };
 
 export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
-  const [activeFacultyKey, setActiveFacultyKey] = useState<'gtk' | 'mik' | 'mk'>('gtk');
+  const [activeFacultyKey, setActiveFacultyKey] = useState<FacultyKey>('gtk');
   const faculty = facultiesData[activeFacultyKey];
 
   return (
@@ -37,13 +41,13 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
             New ideas. <span className="text-[#285780]">Different perspectives.</span>
           </h2>
           <p className="text-base text-[#657886] leading-relaxed">
-            Our curriculum unites three prestigious faculties of the University of Pannonia, providing international students with an interdisciplinary understanding of European business, artificial intelligence, and sustainable green engineering.
+            Our curriculum unites four prestigious faculties of the University of Pannonia, providing international students with an interdisciplinary understanding of European business, artificial intelligence, sustainable green engineering, and humanities.
           </p>
         </div>
 
         {/* Tab Controls */}
-        <div className="grid grid-cols-3 border border-[#dce4e8] bg-slate-50/50 rounded-t-sm overflow-hidden">
-          {(['gtk', 'mik', 'mk'] as const).map((key) => {
+        <div className="grid grid-cols-2 lg:grid-cols-4 border border-[#dce4e8] bg-slate-50/50 rounded-t-sm overflow-hidden">
+          {(['gtk', 'mik', 'mk', 'htk'] as const).map((key) => {
             const f = facultiesData[key];
             const isActive = activeFacultyKey === key;
             return (
