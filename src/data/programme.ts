@@ -497,6 +497,23 @@ export const programmeData: ProgrammeData = {
 
 export const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
+export const dayDates = [
+  "19 July 2027",
+  "20 July 2027",
+  "21 July 2027",
+  "22 July 2027",
+  "23 July 2027",
+  "24 July 2027",
+  "25 July 2027",
+  "26 July 2027",
+  "27 July 2027",
+  "28 July 2027",
+  "29 July 2027",
+  "30 July 2027",
+  "31 July 2027",
+  "1 August 2027"
+];
+
 export const dayThemes = [
   "Discover Veszprém",
   "A day by Lake Balaton",

@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
                 Ideas. Experiences. Pannon.
               </p>
               <span className="text-xs text-[#657886] block">
-                Summer University 2027 · Veszprém, Hungary
+                Summer University 2027 · 19 July – 1 August · Veszprém, Hungary
               </span>
             </div>
           </div>

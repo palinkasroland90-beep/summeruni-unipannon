@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { X, Clock, ArrowRight, AlertCircle } from 'lucide-react';
 import { Session } from '../types';
-import { categoryLabels, weekdays } from '../data/programme';
+import { categoryLabels, weekdays, dayDates } from '../data/programme';
 
 interface SessionDetailModalProps {
   session: Session | null;
@@ -60,7 +60,7 @@ export const SessionDetailModal: React.FC<SessionDetailModalProps> = ({
         {/* Eyebrow & Badges */}
         <div className="flex flex-wrap items-center gap-2.5 mb-4">
           <span className="text-[10px] uppercase font-bold tracking-[0.14em] text-[#285780]">
-            DAY {String(dayNumber).padStart(2, '0')} ({weekdayName.toUpperCase()})
+            DAY {String(dayNumber).padStart(2, '0')} · {weekdayName.toUpperCase()}, {dayDates[dayNumber - 1].toUpperCase()}
           </span>
           <span className="w-1 h-1 rounded-full bg-slate-300"></span>
           <span className="text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 bg-[#f6f5f1] text-[#87682c] border border-[#e7decd] rounded">

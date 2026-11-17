@@ -24,7 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
         <div className="inline-flex items-center gap-3 mb-6">
           <span className="w-8 h-[2px] bg-[#00b0b9]"></span>
           <span className="text-[#b4f5f4] text-[11px] font-bold uppercase tracking-[0.16em]">
-            SUMMER UNIVERSITY 2027 · VESZPRÉM & LAKE BALATON
+            SUMMER UNIVERSITY 2027 · 19 JULY – 1 AUGUST · VESZPRÉM & LAKE BALATON
           </span>
         </div>
 
@@ -79,7 +79,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
             </span>
             <div className="text-xs leading-snug">
               <strong className="block text-[#193c55] font-bold">Days of Discovery</strong>
-              <span className="text-[#657886]">Structured yet flexible</span>
+              <span className="text-[#657886]">19 July – 1 August 2027</span>
             </div>
           </div>
 

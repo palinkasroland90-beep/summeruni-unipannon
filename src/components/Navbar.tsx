@@ -23,7 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onExploreProgramme }) => {
         <div className="shell flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[#0e394c]/30 animate-pulse"></span>
-            <span>UNIVERSITY OF PANNONIA · SUMMER UNIVERSITY 2027</span>
+            <span>UNIVERSITY OF PANNONIA · SUMMER UNIVERSITY 2027 (19 JULY – 1 AUGUST)</span>
           </div>
           <span className="hidden sm:inline-block text-[#0e394c]/80">
             Veszprém & Lake Balaton, Hungary

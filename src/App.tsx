@@ -12,7 +12,7 @@ import { SessionDetailModal } from './components/SessionDetailModal';
 import { SurveyModal } from './components/SurveyModal';
 import { Toast } from './components/Toast';
 import { Session, DiscoveryItem } from './types';
-import { programmeData, weekdays, dayThemes, categoryLabels } from './data/programme';
+import { programmeData, weekdays, dayDates, dayThemes, categoryLabels } from './data/programme';
 
 export const App: React.FC = () => {
   const [selectedSession, setSelectedSession] = useState<Session | null>(null);
@@ -78,7 +78,7 @@ export const App: React.FC = () => {
 
   const handleDownloadProgramme = () => {
     const header = `UNIVERSITY OF PANNONIA
-SUMMER UNIVERSITY 2027 · WORKING PROGRAMME PREVIEW
+SUMMER UNIVERSITY 2027 · 19 JULY – 1 AUGUST 2027
 Veszprém & Lake Balaton, Hungary
 Academic Discovery · European Culture · Global Community
 
@@ -90,6 +90,7 @@ Academic Discovery · European Culture · Global Community
         const dayNum = Number(d);
         const dayTheme = dayThemes[dayNum - 1] || 'Programme';
         const weekday = weekdays[(dayNum - 1) % 7];
+        const dayDate = dayDates[dayNum - 1] || '';
 
         const eventLines = events
           .map(
@@ -98,7 +99,7 @@ Academic Discovery · European Culture · Global Community
           )
           .join('\n\n');
 
-        return `DAY ${String(dayNum).padStart(2, '0')} (${weekday.toUpperCase()}) - ${dayTheme}
+        return `DAY ${String(dayNum).padStart(2, '0')} (${weekday.toUpperCase()}, ${dayDate.toUpperCase()}) - ${dayTheme}
 -------------------------------------------------------
 ${eventLines}`;
       })

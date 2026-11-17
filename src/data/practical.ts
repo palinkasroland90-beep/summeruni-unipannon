@@ -43,7 +43,7 @@ export const faqList: FAQItem[] = [
   },
   {
     question: 'Are the dates and arrangements final?',
-    answer: 'This preview reflects the comprehensive programme concept for summer 2027. Exact calendar dates, accommodation details, transfers, and group bookings will be confirmed in collaboration with partner universities. The wine dinner also features a premium alcohol-free pairing.'
+    answer: 'The 2027 Summer University takes place from 19 July to 1 August 2027. Accommodation details, transfers, and group bookings will be confirmed in collaboration with partner universities. The wine dinner also features a premium alcohol-free pairing.'
   },
   {
     question: 'What language is used during the summer university?',

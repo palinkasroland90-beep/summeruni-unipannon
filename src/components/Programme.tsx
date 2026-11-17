@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Download, Clock, ChevronRight, Info } from 'lucide-react';
-import { programmeData, weekdays, dayThemes, categoryLabels } from '../data/programme';
+import { programmeData, weekdays, dayDates, dayThemes, categoryLabels } from '../data/programme';
 import { Session } from '../types';
 
 interface ProgrammeProps {
@@ -90,7 +90,7 @@ export const Programme: React.FC<ProgrammeProps> = ({
                   : 'text-[#657886] hover:text-[#193c55]'
               }`}
             >
-              Week 1 <span className="font-normal opacity-80">(Days 01–07)</span>
+              Week 1 <span className="font-normal opacity-80">(19–25 July)</span>
             </button>
             <button
               onClick={() => handleWeekChange(2)}
@@ -100,7 +100,7 @@ export const Programme: React.FC<ProgrammeProps> = ({
                   : 'text-[#657886] hover:text-[#193c55]'
               }`}
             >
-              Week 2 <span className="font-normal opacity-80">(Days 08–14)</span>
+              Week 2 <span className="font-normal opacity-80">(26 July – 1 Aug)</span>
             </button>
           </div>
 
@@ -129,6 +129,7 @@ export const Programme: React.FC<ProgrammeProps> = ({
             {daysInWeek.map((dayNum, idx) => {
               const isSelected = dayNum === selectedDay;
               const weekdayName = weekdays[idx % 7];
+              const dayDate = dayDates[dayNum - 1];
               const themeName = dayThemes[dayNum - 1];
 
               return (
@@ -148,7 +149,7 @@ export const Programme: React.FC<ProgrammeProps> = ({
 
                   <div className="space-y-0.5">
                     <span className="text-[11px] uppercase font-bold tracking-wider text-[#7e8d92] block">
-                      {weekdayName}
+                      {weekdayName} · {dayDate.replace(' 2027', '')}
                     </span>
                     <strong className="text-base font-bold text-[#143651] block tracking-tight">
                       Day {String(dayNum).padStart(2, '0')}
@@ -175,7 +176,7 @@ export const Programme: React.FC<ProgrammeProps> = ({
               <div className="flex items-center justify-between border-b border-[#dce4e8] pb-6 mb-8">
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#285780] block mb-1">
-                    WEEK {String(selectedWeek).padStart(2, '0')} / {weekdays[(selectedDay - 1) % 7].toUpperCase()}
+                    WEEK {String(selectedWeek).padStart(2, '0')} / {weekdays[(selectedDay - 1) % 7].toUpperCase()} · {dayDates[selectedDay - 1].toUpperCase()}
                   </span>
                   <h3 className="text-2xl sm:text-3xl font-bold text-[#143651] tracking-tight">
                     {dayThemes[selectedDay - 1]}
