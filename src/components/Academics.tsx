@@ -47,7 +47,7 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
 
         {/* Tab Controls */}
         <div className="grid grid-cols-2 lg:grid-cols-4 border border-[#dce4e8] bg-slate-50/50 rounded-t-sm overflow-hidden">
-          {(['gtk', 'mik', 'mk', 'htk'] as const).map((key) => {
+          {(['gtk', 'mk', 'htk', 'mik'] as const).map((key) => {
             const f = facultiesData[key];
             const isActive = activeFacultyKey === key;
             return (
