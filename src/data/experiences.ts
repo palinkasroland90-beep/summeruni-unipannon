@@ -38,12 +38,7 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     art: 'lake',
     color: 'teal',
     sessionIds: ['d2-s1', 'd2-s2', 'd2-s3'],
-    image: '/images/experiences/disc-2.webp',
-    imageCredit: {
-      author: 'Lukke',
-      license: 'CC BY-SA 3.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Tihany_Abbey_Balaton_panorama_at_sunset.jpg'
-    }
+    image: '/images/experiences/disc-2.webp'
   },
   {
     id: 'disc-3',
