@@ -41,14 +41,14 @@ export const Footer: React.FC = () => {
           </span>
           <div className="flex items-center gap-6">
             <span>
-              Visual identity & photography:{' '}
+              Visual identity:{' '}
               <a
-                href="https://alumni.uni-pannon.hu/"
+                href="https://uni-pannon.hu/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline hover:text-[#285780]"
               >
-                Pannon Alumni
+                University of Pannonia
               </a>
             </span>
             <span>&copy; {new Date().getFullYear()} All rights reserved.</span>
