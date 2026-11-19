@@ -167,6 +167,30 @@ export const hungarianDishes: HungarianDish[] = [
       'Brush the wrapped dough with melted butter and roll in cinnamon sugar.',
       'Bake at 200 °C (turning every 4–5 minutes) for 15–18 minutes until the sugar caramelizes into a crisp golden shell.'
     ]
+  },
+  {
+    id: 'lecso',
+    name: 'Lecsó',
+    subtitle: 'Hungarian Pepper & Tomato Stew',
+    description: 'A classic summer stew of sweet Hungarian wax peppers, ripe tomatoes, onions, and ground paprika—light, fragrant, and versatile.',
+    image: '/images/dishes/lecso.webp',
+    prepTime: '40 mins',
+    servings: '4 servings',
+    ingredients: [
+      '800 g Hungarian yellow wax peppers (TV paprika), seeded and sliced into rings',
+      '400 g ripe tomatoes, peeled and coarsely chopped',
+      '2 large onions, thinly sliced',
+      '1 tbsp sweet Hungarian paprika',
+      '3 tbsp sunflower oil (or 80 g diced smoked bacon for a traditional base)',
+      '1 tsp salt, freshly ground black pepper',
+      'Optional: 150 g sliced smoked sausage (kolbász) or 2–3 beaten eggs stirred in at the end'
+    ],
+    steps: [
+      'Heat the oil (or render the diced smoked bacon) in a wide skillet over medium heat and sauté the sliced onions until soft and lightly golden.',
+      'Remove the pan briefly from the heat, stir in the sweet Hungarian paprika so it stays vibrant and never turns bitter, then immediately add the sliced peppers.',
+      'Cook for 8–10 minutes until the peppers start to soften, then stir in the chopped tomatoes, salt, and pepper (plus sliced sausage if using).',
+      'Simmer uncovered for 15–20 minutes until the sauce thickens and the vegetables are tender. Serve warm with fresh crusty bread, or fold in beaten eggs just before serving.'
+    ]
   }
 ];
 
