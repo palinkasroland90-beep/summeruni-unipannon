@@ -122,12 +122,7 @@ export const optionalActivities: DiscoveryItem[] = [
     art: 'music',
     color: 'gold',
     sessionIds: ['d4-s5'],
-    image: '/images/experiences/opt-5.webp',
-    imageCredit: {
-      author: 'Szelcsányi Nóra (Nóra)',
-      license: 'CC BY-SA 2.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9mi_utcazenei_fesztiv%C3%A1l.jpg'
-    }
+    image: '/images/experiences/opt-5.webp'
   },
   {
     id: 'opt-2',
@@ -196,7 +191,8 @@ export const optionalActivities: DiscoveryItem[] = [
     day: 12,
     art: 'people',
     color: 'gold',
-    sessionIds: ['d12-s4']
+    sessionIds: ['d12-s4'],
+    image: '/images/experiences/opt-6.webp'
   },
   {
     id: 'opt-7',
@@ -207,11 +203,6 @@ export const optionalActivities: DiscoveryItem[] = [
     art: 'city',
     color: 'gold',
     sessionIds: ['d14-s4'],
-    image: '/images/experiences/opt-7.webp',
-    imageCredit: {
-      author: 'Globetrotter19',
-      license: 'CC BY-SA 3.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Veszpr%C3%A9m_2016,_view_from_S%C3%A9d_Valley_to_the_Seminary.jpg'
-    }
+    image: '/images/experiences/opt-7.webp'
   }
 ];
