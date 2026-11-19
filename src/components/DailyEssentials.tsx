@@ -27,25 +27,25 @@ interface CarouselSlideMeta {
 
 const SLIDE_META: CarouselSlideMeta[] = [
   {
-    id: 'rhythm',
+    id: 'accommodation',
     step: '01',
+    title: 'Recommended Accommodation',
+    subtext: `${recommendedAccommodations.length} partner hotels`,
+    Icon: Building2,
+  },
+  {
+    id: 'rhythm',
+    step: '02',
     title: 'Typical Daily Rhythm',
     subtext: `${dailyRhythm.length} daily blocks`,
     Icon: Clock,
   },
   {
     id: 'dishes',
-    step: '02',
+    step: '03',
     title: 'Typical Hungarian Dishes',
     subtext: `${hungarianDishes.length} dishes & recipes`,
     Icon: UtensilsCrossed,
-  },
-  {
-    id: 'accommodation',
-    step: '03',
-    title: 'Recommended Accommodation',
-    subtext: `${recommendedAccommodations.length} partner hotels`,
-    Icon: Building2,
   },
 ];
 
@@ -104,14 +104,14 @@ export const DailyEssentials: React.FC = () => {
           <div className="inline-flex items-center gap-3 mb-3">
             <span className="w-8 h-[2px] bg-[#00b0b9]"></span>
             <span className="text-[#285780] text-[11px] font-bold uppercase tracking-[0.16em]">
-              DAILY RHYTHM, CUISINE & ACCOMMODATION
+              ACCOMMODATION, DAILY RHYTHM & CUISINE
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#143651] tracking-tight mb-4">
             Live like a local. <span className="text-[#285780]">Feel at home.</span>
           </h2>
           <p className="text-base text-[#657886] leading-relaxed">
-            Browse our daily schedule rhythm, classic Hungarian dishes with simple recipes, and recommended hotels in comfort.
+            Explore recommended hotels, browse our daily schedule rhythm, and discover classic Hungarian dishes with simple recipes in comfort.
           </p>
         </div>
 
@@ -192,10 +192,72 @@ export const DailyEssentials: React.FC = () => {
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${activeSlide * 100}%)` }}
           >
-            {/* Slide 0: Typical Daily Rhythm */}
+            {/* Slide 0: Recommended Accommodation */}
             <div
               className="w-full flex-shrink-0 p-6 sm:p-8 md:p-10"
               aria-hidden={activeSlide !== 0}
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-[#dce4e8]">
+                <div className="flex items-center gap-3">
+                  <Building2 className="w-5 h-5 text-[#00b0b9] flex-shrink-0" />
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#143651]">
+                      Recommended Accommodation
+                    </h3>
+                    <p className="text-sm text-[#657886] mt-0.5">
+                      Trusted hotel and campus residence options across Veszprém and Lake Balaton.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                {recommendedAccommodations.map((hotel, i) => (
+                  <div
+                    key={i}
+                    className="bg-white border border-[#dce4e8] p-6 rounded-sm flex flex-col justify-between"
+                  >
+                    <div>
+                      <div className="flex items-start justify-between gap-3">
+                        {hotel.url ? (
+                          <a
+                            href={hotel.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            tabIndex={activeSlide === 0 ? 0 : -1}
+                            className="inline-flex items-center gap-1.5 text-lg font-bold text-[#143651] hover:text-[#285780] transition-colors group"
+                          >
+                            <span>{hotel.name}</span>
+                            <ArrowUpRight className="w-4 h-4 text-[#00b0b9] flex-shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                          </a>
+                        ) : (
+                          <strong className="text-lg text-[#143651] font-bold">
+                            {hotel.name}
+                          </strong>
+                        )}
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#285780] bg-[#f6f5f1] px-2.5 py-1 border border-[#dce4e8] rounded-sm flex-shrink-0">
+                          {hotel.category}
+                        </span>
+                      </div>
+
+                      <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#007d83] mt-1.5 mb-3">
+                        <MapPin className="w-4 h-4 flex-shrink-0" />
+                        <span>{hotel.location}</span>
+                      </div>
+
+                      <p className="text-sm sm:text-base text-[#657886] leading-relaxed">
+                        {hotel.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Slide 1: Typical Daily Rhythm */}
+            <div
+              className="w-full flex-shrink-0 p-6 sm:p-8 md:p-10"
+              aria-hidden={activeSlide !== 1}
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-[#dce4e8]">
                 <div className="flex items-center gap-3">
@@ -231,10 +293,10 @@ export const DailyEssentials: React.FC = () => {
               </div>
             </div>
 
-            {/* Slide 1: Typical Hungarian Dishes */}
+            {/* Slide 2: Typical Hungarian Dishes */}
             <div
               className="w-full flex-shrink-0 p-6 sm:p-8 md:p-10"
-              aria-hidden={activeSlide !== 1}
+              aria-hidden={activeSlide !== 2}
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-[#dce4e8]">
                 <div className="flex items-center gap-3">
@@ -258,7 +320,7 @@ export const DailyEssentials: React.FC = () => {
                   <button
                     key={dish.id}
                     type="button"
-                    tabIndex={activeSlide === 1 ? 0 : -1}
+                    tabIndex={activeSlide === 2 ? 0 : -1}
                     onClick={() => setSelectedDish(dish)}
                     className="w-full bg-white border border-[#dce4e8] hover:border-[#00b0b9] hover:shadow-md p-4 sm:p-5 rounded-sm text-left flex items-start gap-4 sm:gap-5 transition-all group cursor-pointer"
                   >
@@ -284,68 +346,6 @@ export const DailyEssentials: React.FC = () => {
                       </span>
                     </div>
                   </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Slide 2: Recommended Accommodation */}
-            <div
-              className="w-full flex-shrink-0 p-6 sm:p-8 md:p-10"
-              aria-hidden={activeSlide !== 2}
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 pb-4 border-b border-[#dce4e8]">
-                <div className="flex items-center gap-3">
-                  <Building2 className="w-5 h-5 text-[#00b0b9] flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-[#143651]">
-                      Recommended Accommodation
-                    </h3>
-                    <p className="text-sm text-[#657886] mt-0.5">
-                      Trusted hotel and campus residence options across Veszprém and Lake Balaton.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                {recommendedAccommodations.map((hotel, i) => (
-                  <div
-                    key={i}
-                    className="bg-white border border-[#dce4e8] p-6 rounded-sm flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex items-start justify-between gap-3">
-                        {hotel.url ? (
-                          <a
-                            href={hotel.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            tabIndex={activeSlide === 2 ? 0 : -1}
-                            className="inline-flex items-center gap-1.5 text-lg font-bold text-[#143651] hover:text-[#285780] transition-colors group"
-                          >
-                            <span>{hotel.name}</span>
-                            <ArrowUpRight className="w-4 h-4 text-[#00b0b9] flex-shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                          </a>
-                        ) : (
-                          <strong className="text-lg text-[#143651] font-bold">
-                            {hotel.name}
-                          </strong>
-                        )}
-                        <span className="text-xs font-bold uppercase tracking-wider text-[#285780] bg-[#f6f5f1] px-2.5 py-1 border border-[#dce4e8] rounded-sm flex-shrink-0">
-                          {hotel.category}
-                        </span>
-                      </div>
-
-                      <div className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#007d83] mt-1.5 mb-3">
-                        <MapPin className="w-4 h-4 flex-shrink-0" />
-                        <span>{hotel.location}</span>
-                      </div>
-
-                      <p className="text-sm sm:text-base text-[#657886] leading-relaxed">
-                        {hotel.description}
-                      </p>
-                    </div>
-                  </div>
                 ))}
               </div>
             </div>
