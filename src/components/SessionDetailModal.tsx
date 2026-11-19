@@ -66,17 +66,6 @@ export const SessionDetailModal: React.FC<SessionDetailModalProps> = ({
             >
               <X className="w-4 h-4" />
             </button>
-
-            {experience.imageCredit && (
-              <a
-                href={experience.imageCredit.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="absolute bottom-3 right-4 text-[10px] text-white/85 hover:text-white underline-offset-2 hover:underline transition-colors"
-              >
-                Photo: {experience.imageCredit.author} · {experience.imageCredit.license}
-              </a>
-            )}
           </div>
         ) : (
           /* Close button */

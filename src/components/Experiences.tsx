@@ -100,7 +100,7 @@ export const Experiences: React.FC<ExperiencesProps> = ({
                       className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div
-                      className="absolute inset-0 bg-gradient-to-b from-[#0b273d]/75 via-[#0b273d]/10 to-[#0b273d]/70 pointer-events-none"
+                      className="absolute inset-0 bg-gradient-to-b from-[#0b273d]/70 via-transparent to-transparent pointer-events-none"
                       aria-hidden="true"
                     />
                   </>
@@ -115,18 +115,7 @@ export const Experiences: React.FC<ExperiencesProps> = ({
                   </span>
                 </div>
 
-                {item.image && item.imageCredit ? (
-                  <a
-                    href={item.imageCredit.sourceUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="relative z-10 self-end text-[10px] text-white/80 hover:text-white underline-offset-2 hover:underline transition-colors"
-                    title={`Photo by ${item.imageCredit.author} (${item.imageCredit.license})`}
-                  >
-                    {item.imageCredit.author} · {item.imageCredit.license}
-                  </a>
-                ) : (
+                {!item.image && (
                   /* Vector SVG line illustration fallback */
                   <svg
                     className="absolute right-3 bottom-0 w-44 h-28 stroke-current fill-none stroke-[1.2] opacity-85 group-hover:scale-105 transition-transform"

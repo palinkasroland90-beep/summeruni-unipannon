@@ -54,12 +54,7 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     art: 'porcelain',
     color: 'blue',
     sessionIds: ['d6-s1'],
-    image: '/images/experiences/disc-3.webp',
-    imageCredit: {
-      author: 'Davidi Vardi',
-      license: 'CC BY-SA 4.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Herend_Porcelain_Maker.jpg'
-    }
+    image: '/images/experiences/disc-3.webp'
   },
   {
     id: 'disc-4',
@@ -70,12 +65,7 @@ export const cultureDiscoveries: DiscoveryItem[] = [
     art: 'wine',
     color: 'teal',
     sessionIds: ['d6-s4'],
-    image: '/images/experiences/disc-4.webp',
-    imageCredit: {
-      author: 'm.louis',
-      license: 'CC BY-SA 2.0',
-      sourceUrl: 'https://commons.wikimedia.org/wiki/File:Hungarian_Guly%C3%A1s.jpg'
-    }
+    image: '/images/experiences/disc-4.webp'
   },
   {
     id: 'disc-5',
