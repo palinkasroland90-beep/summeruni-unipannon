@@ -101,7 +101,6 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
             </span>
             <div className="text-xs leading-snug">
               <strong className="block text-[#193c55] font-bold">Faculty Perspectives</strong>
-              <span className="text-[#657886]">GTK · MIK · MK</span>
             </div>
           </div>
 
