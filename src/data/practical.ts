@@ -27,6 +27,7 @@ export interface AccommodationOption {
   category: string;
   description: string;
   url?: string;
+  approxPrice?: string;
 }
 
 export const dailyRhythm: ScheduleSlot[] = [
@@ -207,20 +208,23 @@ export const recommendedAccommodations: AccommodationOption[] = [
     location: 'Veszprém · City Centre',
     category: 'Historic Boutique',
     description: 'Four-star boutique hotel and renowned Historante restaurant nestled directly beneath the Veszprém Castle walls.',
-    url: 'https://hotelhistoria.hu'
+    url: 'https://hotelhistoria.hu',
+    approxPrice: 'Approx. HUF 25,000 / person / night'
   },
   {
     name: 'Hotel Magister',
     location: 'Veszprém · University Campus',
     category: 'University Residence',
     description: 'The University of Pannonia’s modern campus residence and hotel (József Attila u. 34/2.), within easy walking distance of lecture halls.',
-    url: 'https://uni-pannon.hu'
+    url: 'https://uni-pannon.hu',
+    approxPrice: 'Approx. HUF 14,000 / person / night'
   },
   {
     name: 'Hotel Marina-Port',
     location: 'Balatonkenese · Lake Balaton',
     category: 'Lakeside Resort',
     description: 'Waterfront hotel directly on the northeastern shore of Lake Balaton, featuring private lakeside gardens and wellness facilities.',
-    url: 'https://www.hotelmarinaport.hu'
+    url: 'https://www.hotelmarinaport.hu',
+    approxPrice: 'Approx. HUF 50,000 / person / night'
   }
 ];

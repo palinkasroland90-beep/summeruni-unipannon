@@ -249,9 +249,28 @@ export const DailyEssentials: React.FC = () => {
                         {hotel.description}
                       </p>
                     </div>
+
+                    <div className="mt-4 pt-3.5 border-t border-[#dce4e8] flex flex-wrap items-center justify-between gap-2">
+                      <span className="text-xs font-semibold uppercase tracking-wider text-[#657886]">
+                        Indicative rate
+                      </span>
+                      {hotel.approxPrice ? (
+                        <span className="text-sm font-bold text-[#285780]">
+                          {hotel.approxPrice}
+                        </span>
+                      ) : (
+                        <span className="text-xs font-semibold italic text-[#7c8c96]">
+                          To be confirmed
+                        </span>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
+
+              <p className="text-xs text-[#657886] mt-5">
+                * Displayed rates are approximate indicative estimates per person, per night, and are subject to final confirmation.
+              </p>
             </div>
 
             {/* Slide 1: Typical Daily Rhythm */}
