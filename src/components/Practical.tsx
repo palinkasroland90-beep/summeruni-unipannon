@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { faqList } from '../data/practical';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, Building2, ArrowUpRight } from 'lucide-react';
 
-export const Practical: React.FC = () => {
+interface PracticalProps {
+  onViewAccommodation: () => void;
+}
+
+export const Practical: React.FC<PracticalProps> = ({ onViewAccommodation }) => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const toggleFaq = (index: number) => {
@@ -73,6 +77,17 @@ export const Practical: React.FC = () => {
                     {isOpen && (
                       <div className="mt-3 pr-8 text-xs sm:text-sm text-[#657886] leading-relaxed animate-fade-in">
                         <p>{item.answer}</p>
+                        {item.actionType === 'accommodation' && item.actionLabel && (
+                          <button
+                            type="button"
+                            onClick={onViewAccommodation}
+                            className="mt-3.5 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#285780] hover:text-[#007d83] transition-colors group cursor-pointer"
+                          >
+                            <Building2 className="w-4 h-4 text-[#00b0b9]" />
+                            <span>{item.actionLabel}</span>
+                            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                          </button>
+                        )}
                       </div>
                     )}
                   </div>

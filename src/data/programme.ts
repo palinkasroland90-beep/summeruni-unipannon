@@ -74,7 +74,7 @@ export const programmeData: ProgrammeData = {
       "id": "d3-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "GTK: Entrepreneurial Mindset & Idea Generation (trends, opportunities & evaluation). \u00b7 MIK: Fundamentals of Multimedia (text, image, audio, video & authoring tools). \u00b7 MK: Introduction to Materials Science (classification, smart materials & circular economy).",
+      "description": "Business & Economics: Entrepreneurial Mindset & Idea Generation (trends, opportunities & evaluation). \u00b7 Information Technology: Fundamentals of Multimedia (text, image, audio, video & authoring tools). \u00b7 Engineering: Introduction to Materials Science (classification, smart materials & circular economy).",
       "category": "academic",
       "tentative": false
     },
@@ -90,7 +90,7 @@ export const programmeData: ProgrammeData = {
       "id": "d3-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "GTK: Team Building & Entrepreneurial Collaboration (complementary competencies & founder roles). \u00b7 HTK: Breaking the Ice \u2013 Let\u2019s Get Talking! (speed chatting, pair interviews & sharing photos from Veszpr\u00e9m, Tihany & Balatonf\u00fcred).",
+      "description": "Business & Economics: Team Building & Entrepreneurial Collaboration (complementary competencies & founder roles). \u00b7 Humanities: Breaking the Ice \u2013 Let\u2019s Get Talking! (speed chatting, pair interviews & sharing photos from Veszpr\u00e9m, Tihany & Balatonf\u00fcred).",
       "category": "academic",
       "tentative": false
     },
@@ -108,7 +108,7 @@ export const programmeData: ProgrammeData = {
       "id": "d4-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "GTK: Market Research & Customer Discovery (target segments, interviews & competitor analysis). \u00b7 MIK: Human Visual & Auditory Perception (optical/acoustic illusions & sensory design). \u00b7 MK: States of Matter & Material Properties I (amorphous/crystalline solids & optical/electrical/magnetic traits).",
+      "description": "Business & Economics: Market Research & Customer Discovery (target segments, interviews & competitor analysis). \u00b7 Information Technology: Human Visual & Auditory Perception (optical/acoustic illusions & sensory design). \u00b7 Engineering: States of Matter & Material Properties I (amorphous/crystalline solids & optical/electrical/magnetic traits).",
       "category": "academic",
       "tentative": false
     },
@@ -124,7 +124,7 @@ export const programmeData: ProgrammeData = {
       "id": "d4-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "GTK: Value Proposition & Business Model Canvas (solving customer problems & revenue/partner logic). \u00b7 HTK: Speak Naturally! \u2013 Pronunciation & Everyday English (rhythm, role-plays & Culture Bingo for the Street Music Festival).",
+      "description": "Business & Economics: Value Proposition & Business Model Canvas (solving customer problems & revenue/partner logic). \u00b7 Humanities: Speak Naturally! \u2013 Pronunciation & Everyday English (rhythm, role-plays & Culture Bingo for the Street Music Festival).",
       "category": "academic",
       "tentative": false
     },
@@ -150,7 +150,7 @@ export const programmeData: ProgrammeData = {
       "id": "d5-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "GTK: Customer-Centred Product & Service Design (user experience & sustainability). \u00b7 MIK: Digital Image Creation & Properties (pixels, resolution, colour depth & colour models). \u00b7 MK: Material Properties II & Metals I (mechanical/thermal traits & fundamentals of metallurgy).",
+      "description": "Business & Economics: Customer-Centred Product & Service Design (user experience & sustainability). \u00b7 Information Technology: Digital Image Creation & Properties (pixels, resolution, colour depth & colour models). \u00b7 Engineering: Material Properties II & Metals I (mechanical/thermal traits & fundamentals of metallurgy).",
       "category": "academic",
       "tentative": false
     },
@@ -166,7 +166,7 @@ export const programmeData: ProgrammeData = {
       "id": "d5-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "GTK: Prototyping & Market Testing (building an MVP & iterating from user feedback). \u00b7 HTK: Tell Your Story! \u2013 Fluency & Storytelling (story cubes, expressing opinions & cultural excursion reflections).",
+      "description": "Business & Economics: Prototyping & Market Testing (building an MVP & iterating from user feedback). \u00b7 Humanities: Tell Your Story! \u2013 Fluency & Storytelling (story cubes, expressing opinions & cultural excursion reflections).",
       "category": "academic",
       "tentative": false
     },
@@ -260,7 +260,7 @@ export const programmeData: ProgrammeData = {
       "id": "d8-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "GTK: Marketing Strategy & Brand Building (positioning, key messages, channels & KPIs). \u00b7 MIK: Image Editing Functions & Algorithms (cropping, geometric transforms, colour correction & filtering). \u00b7 MK: Metals II & Plastics (steels, cast irons, non-ferrous/special alloys, polymers & recycling).",
+      "description": "Business & Economics: Marketing Strategy & Brand Building (positioning, key messages, channels & KPIs). \u00b7 Information Technology: Image Editing Functions & Algorithms (cropping, geometric transforms, colour correction & filtering). \u00b7 Engineering: Metals II & Plastics (steels, cast irons, non-ferrous/special alloys, polymers & recycling).",
       "category": "academic",
       "tentative": false
     },
@@ -276,7 +276,7 @@ export const programmeData: ProgrammeData = {
       "id": "d8-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "GTK: Go-to-Market & Sales Planning (sales channels, partnerships & international scaling). \u00b7 HTK: Across Cultures \u2013 Intercultural Communication (cultural quizzes, Herend/Folk Night reflections & Conversation Passport prep).",
+      "description": "Business & Economics: Go-to-Market & Sales Planning (sales channels, partnerships & international scaling). \u00b7 Humanities: Across Cultures \u2013 Intercultural Communication (cultural quizzes, Herend/Folk Night reflections & Conversation Passport prep).",
       "category": "academic",
       "tentative": false
     },
@@ -294,7 +294,7 @@ export const programmeData: ProgrammeData = {
       "id": "d9-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "GTK: Pricing & Financial Planning (startup/operating costs, cash flow & break-even analysis). \u00b7 MIK: Media Creation with Generative AI (prompt engineering, AI media tools, capabilities & limits). \u00b7 MK: Elastomers & Inorganic Non-Metals I (rubber recycling, ceramics, glasses & binders).",
+      "description": "Business & Economics: Pricing & Financial Planning (startup/operating costs, cash flow & break-even analysis). \u00b7 Information Technology: Media Creation with Generative AI (prompt engineering, AI media tools, capabilities & limits). \u00b7 Engineering: Elastomers & Inorganic Non-Metals I (rubber recycling, ceramics, glasses & binders).",
       "category": "academic",
       "tentative": false
     },
@@ -310,7 +310,7 @@ export const programmeData: ProgrammeData = {
       "id": "d9-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "GTK: Financing & Investor Readiness (comparing grants, loans, bootstrapping & equity investment). \u00b7 HTK: Think Fast, Speak Freely! \u2013 Spontaneous Communication (improvisation, Taboo & Balaton Uplands Photo Mission briefing).",
+      "description": "Business & Economics: Financing & Investor Readiness (comparing grants, loans, bootstrapping & equity investment). \u00b7 Humanities: Think Fast, Speak Freely! \u2013 Spontaneous Communication (improvisation, Taboo & Balaton Uplands Photo Mission briefing).",
       "category": "academic",
       "tentative": false
     },
@@ -328,7 +328,7 @@ export const programmeData: ProgrammeData = {
       "id": "d10-s1",
       "time": "08:45\u201312:00",
       "title": "Academic lectures",
-      "description": "GTK: Company Setup & Operations (legal forms, IP protection, launch roadmap & risk plan). \u00b7 MIK: Practical Multimedia Project & Quiz (digital image editing, generative AI & interactive quiz). \u00b7 MK: Inorganic Non-Metals II & Composites (ceramics, glasses, binders, matrices & disperse phases).",
+      "description": "Business & Economics: Company Setup & Operations (legal forms, IP protection, launch roadmap & risk plan). \u00b7 Information Technology: Practical Multimedia Project & Quiz (digital image editing, generative AI & interactive quiz). \u00b7 Engineering: Inorganic Non-Metals II & Composites (ceramics, glasses, binders, matrices & disperse phases).",
       "category": "academic",
       "tentative": false
     },
@@ -344,7 +344,7 @@ export const programmeData: ProgrammeData = {
       "id": "d10-s3",
       "time": "13:00\u201315:30",
       "title": "Academic lectures",
-      "description": "GTK: Business Plan & Final Pitch (summarizing the venture concept & persuasive team presentation with feedback). \u00b7 HTK: Speak with Confidence! \u2013 The Great English Challenge (multi-station team challenge & My Hungarian Experience final talks).",
+      "description": "Business & Economics: Business Plan & Final Pitch (summarizing the venture concept & persuasive team presentation with feedback). \u00b7 Humanities: Speak with Confidence! \u2013 The Great English Challenge (multi-station team challenge & My Hungarian Experience final talks).",
       "category": "academic",
       "tentative": false
     },

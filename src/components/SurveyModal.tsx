@@ -34,7 +34,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
   });
 
   const [academicState, setAcademicState] = useState({
-    topic: 'gtk',
+    topic: 'business',
     format: 'interactive',
     comment: '',
   });
@@ -58,8 +58,16 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
               comment: parsed.comment || '',
             });
           } else {
+            const legacyTopicMap: Record<string, string> = {
+              gtk: 'business',
+              mk: 'engineering',
+              htk: 'humanities',
+              mik: 'it',
+            };
+            const validTopics = ['business', 'engineering', 'humanities', 'it'];
+            const normalizedTopic = legacyTopicMap[parsed.topic] || parsed.topic;
             setAcademicState({
-              topic: parsed.topic || 'gtk',
+              topic: validTopics.includes(normalizedTopic) ? normalizedTopic : 'business',
               format: parsed.format || 'interactive',
               comment: parsed.comment || '',
             });

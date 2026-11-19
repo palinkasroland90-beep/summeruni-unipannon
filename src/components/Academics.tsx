@@ -85,7 +85,7 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
             <div className="relative z-10">
               <img
                 src={facultyLogos[activeFacultyKey]}
-                alt={`${faculty.code} - ${faculty.name}`}
+                alt={faculty.name}
                 className="h-20 sm:h-24 w-auto object-contain object-left"
               />
             </div>

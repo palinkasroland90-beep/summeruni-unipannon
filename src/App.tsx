@@ -20,6 +20,10 @@ export const App: React.FC = () => {
   const [selectedExperience, setSelectedExperience] = useState<DiscoveryItem | null>(null);
   const [selectedSessionDay, setSelectedSessionDay] = useState<number>(1);
   const [targetAgendaDay, setTargetAgendaDay] = useState<number>(1);
+  const [essentialsSlideRequest, setEssentialsSlideRequest] = useState<{
+    slide: number;
+    nonce: number;
+  } | null>(null);
   const [surveyModalKind, setSurveyModalKind] = useState<'programme' | 'academic' | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
@@ -62,6 +66,12 @@ export const App: React.FC = () => {
   const handleJumpToDay = (dayNumber: number) => {
     setTargetAgendaDay(dayNumber);
     const el = document.getElementById('programme');
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleViewAccommodation = () => {
+    setEssentialsSlideRequest((prev) => ({ slide: 0, nonce: (prev?.nonce ?? 0) + 1 }));
+    const el = document.getElementById('essentials');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -152,7 +162,7 @@ ${eventLines}`;
           onDownloadProgramme={handleDownloadProgramme}
         />
 
-        {/* Academic Faculties (GTK, MIK, MK) */}
+        {/* Academic Faculties */}
         <Academics onJumpToDay={handleJumpToDay} />
 
         {/* Culture, Balaton & Optional Activities */}
@@ -162,10 +172,10 @@ ${eventLines}`;
         />
 
         {/* Daily Rhythm, Hungarian Dishes & Recommended Accommodation */}
-        <DailyEssentials />
+        <DailyEssentials activeSlideRequest={essentialsSlideRequest} />
 
         {/* Campus Life & Practical FAQs */}
-        <Practical />
+        <Practical onViewAccommodation={handleViewAccommodation} />
 
         {/* Interactive Student Surveys */}
         <Surveys

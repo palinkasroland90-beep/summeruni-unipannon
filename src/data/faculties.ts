@@ -2,7 +2,6 @@ import { Faculty } from '../types';
 
 export const facultiesData: Record<string, Faculty> = {
   gtk: {
-    code: 'GTK',
     name: 'Faculty of Business and Economics',
     text: 'Course: Starting a Business (2 hours/week · 3 credits). Learn the essential steps of launching a venture—from idea generation, market research, and customer-centric product design to Business Model Canvas, marketing strategy, financial planning, and funding. Apply your knowledge in a team startup project culminating in a closing business pitch.',
     meta: ['Idea Generation & MVP', 'Business Model Canvas', 'Financial Planning & Pitch'],
@@ -23,7 +22,6 @@ export const facultiesData: Record<string, Faculty> = {
     art: '<circle cx="205" cy="155" r="95"/><circle cx="205" cy="155" r="65"/><path d="M110 155h190M205 60v190M135 85l140 140M135 225l140-140"/><circle cx="205" cy="155" r="23"/>'
   },
   mik: {
-    code: 'MIK',
     name: 'Faculty of Information Technology',
     text: 'Course: Fundamentals of Multimedia I (2 hours/week · 3 credits). Explore the core concepts, technologies, and applications of digital media—spanning human visual and auditory perception, digital image representation, image editing algorithms, and generative AI tools. Combine theory with creative hands-on project work.',
     meta: ['Digital Imaging & Pixels', 'Generative AI Media', 'Creative Project & Quiz'],
@@ -44,7 +42,6 @@ export const facultiesData: Record<string, Faculty> = {
     art: '<rect x="110" y="60" width="190" height="190" rx="15"/><circle cx="160" cy="120" r="18"/><circle cx="250" cy="120" r="18"/><path d="M140 190h130M205 60v50M160 138v52M250 138v52"/>'
   },
   mk: {
-    code: 'MK',
     name: 'Faculty of Engineering',
     text: 'Course: Materials Science (6 sessions · 4×45 mins). Gain a cohesive engineering perspective on how material composition and structure shape properties and real-world applications—covering metals, alloys, polymers, ceramics, glasses, binders, and composites, plus modern characterization methods.',
     meta: ['Metals, Alloys & Polymers', 'Ceramics & Composites', 'Circular Materials Science'],
@@ -65,7 +62,6 @@ export const facultiesData: Record<string, Faculty> = {
     art: '<circle cx="205" cy="155" r="80"/><path d="M205 45v30M205 235v30M95 155h30M285 155h30M127 77l21 21M263 213l21 21M127 233l21-21M263 97l21-21"/><circle cx="205" cy="155" r="40"/>'
   },
   htk: {
-    code: 'HTK',
     name: 'Faculty of Humanities',
     text: 'Summer English Communication Programme (6 training days · 42 lessons · A2 & B1 groups of 10–15 students). Boost spoken fluency, pronunciation, and confidence in everyday and academic communication through role-plays, debates, and excursion missions—beginning with the Placement & Speaking Challenge on Day 01.',
     meta: ['Placement & Speaking Challenge', 'A2 & B1 Small Groups', 'Excursion Language Missions'],

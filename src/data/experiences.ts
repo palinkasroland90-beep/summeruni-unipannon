@@ -133,7 +133,7 @@ export const optionalActivities: DiscoveryItem[] = [
     id: 'opt-2',
     title: 'Cistercian Abbey of Zirc Excursion',
     desc: 'An afternoon bus trip into the Bakony Hills to explore the historic Cistercian Abbey and gardens.',
-    longDesc: 'Head north into the cool green hills of the Bakony Mountains on an optional Friday afternoon bus excursion to Zirc, Hungary’s highest town. Visit the monumental Cistercian Abbey of Zirc—founded in the 12th century and renowned for its baroque basilica, historic library heritage, and tranquil English-style arboretum. Paired with interactive English language missions prepared during the afternoon HTK workshop, the trip blends Central European monastic history with scenic mountain air before returning to Veszprém in time for a shared dinner.',
+    longDesc: 'Head north into the cool green hills of the Bakony Mountains on an optional Friday afternoon bus excursion to Zirc, Hungary’s highest town. Visit the monumental Cistercian Abbey of Zirc—founded in the 12th century and renowned for its baroque basilica, historic library heritage, and tranquil English-style arboretum. Paired with interactive English language missions prepared during the afternoon Humanities workshop, the trip blends Central European monastic history with scenic mountain air before returning to Veszprém in time for a shared dinner.',
     day: 5,
     art: 'castle',
     color: 'gold',

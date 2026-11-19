@@ -1,6 +1,8 @@
 export interface FAQItem {
   question: string;
   answer: string;
+  actionLabel?: string;
+  actionType?: 'accommodation';
 }
 
 export interface ScheduleSlot {
@@ -72,7 +74,9 @@ export const faqList: FAQItem[] = [
   },
   {
     question: 'Where will students be accommodated?',
-    answer: 'Students stay in modern, secure university dormitory accommodation in Veszprém, within walking distance of the historic city centre, faculty lecture halls, and campus amenities.'
+    answer: 'Students can stay at the University of Pannonia’s modern campus residence (Hotel Magister) or at our recommended partner hotels in Veszprém and around Lake Balaton, all conveniently connected to campus and programme venues.',
+    actionLabel: 'View Recommended Accommodation & Rates',
+    actionType: 'accommodation'
   }
 ];
 

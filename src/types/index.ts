@@ -20,7 +20,6 @@ export interface DayInfo {
 }
 
 export interface Faculty {
-  code: string;
   name: string;
   text: string;
   meta: string[];

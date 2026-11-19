@@ -49,10 +49,20 @@ const SLIDE_META: CarouselSlideMeta[] = [
   },
 ];
 
-export const DailyEssentials: React.FC = () => {
+interface DailyEssentialsProps {
+  activeSlideRequest?: { slide: number; nonce: number } | null;
+}
+
+export const DailyEssentials: React.FC<DailyEssentialsProps> = ({ activeSlideRequest }) => {
   const [selectedDish, setSelectedDish] = useState<HungarianDish | null>(null);
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const touchStartX = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (activeSlideRequest) {
+      setActiveSlide(activeSlideRequest.slide);
+    }
+  }, [activeSlideRequest]);
 
   const goPrev = () => setActiveSlide((prev) => (prev + 2) % 3);
   const goNext = () => setActiveSlide((prev) => (prev + 1) % 3);

@@ -27,9 +27,26 @@ export const languageOptions: SurveyOption[] = [
 ];
 
 export const academicTrackOptions: SurveyOption[] = [
-  { value: 'gtk', label: 'Business & Regional Economics (GTK)', desc: 'Regional competitiveness, circular business models, and Central European trade.' },
-  { value: 'mik', label: 'Applied AI & Information Technology (MIK)', desc: 'Artificial intelligence applications, smart sensors, and modern data platforms.' },
-  { value: 'mk', label: 'Engineering & Sustainability (MK)', desc: 'Advanced functional materials, circular chemistry, and environmental innovation.' }
+  {
+    value: 'business',
+    label: 'Starting a Business – Faculty of Business and Economics',
+    desc: 'Entrepreneurial mindset, market research, Business Model Canvas, MVP prototyping, financial planning, and startup pitching.'
+  },
+  {
+    value: 'engineering',
+    label: 'Materials Science – Faculty of Engineering',
+    desc: 'Material composition and properties across metals, alloys, polymers, ceramics, glasses, composites, and circular recycling.'
+  },
+  {
+    value: 'humanities',
+    label: 'English Communication – Faculty of Humanities',
+    desc: 'Interactive spoken fluency, pronunciation, intercultural dialogue, and excursion-linked English communication missions.'
+  },
+  {
+    value: 'it',
+    label: 'Fundamentals of Multimedia & AI – Faculty of Information Technology',
+    desc: 'Human visual/auditory perception, digital imaging, image editing algorithms, and generative AI media creation.'
+  }
 ];
 
 export const learningFormatOptions: SurveyOption[] = [

@@ -93,7 +93,7 @@ export const Surveys: React.FC<SurveysProps> = ({
               </div>
 
               <p className="text-xs sm:text-sm text-[#657886] leading-relaxed mb-6">
-                Select the faculty topics you wish to explore (Applied AI, European Business, Circular Engineering) and your preferred classroom formats (hands-on workshops vs expert lectures).
+                Select the faculty topics you wish to explore (Entrepreneurship, Materials Science, English Communication, Multimedia & AI) and your preferred classroom formats (hands-on workshops vs expert lectures).
               </p>
             </div>
 
