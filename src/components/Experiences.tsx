@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import {
   cultureDiscoveries,
   optionalActivities,
-  experienceArtSvg,
 } from '../data/experiences';
 import { DiscoveryItem } from '../types';
 import { MessageCircle, ArrowRight } from 'lucide-react';
+import { ExperienceArtSvg } from './DecorativeArt';
 
 interface ExperiencesProps {
   onSelectExperience: (item: DiscoveryItem) => void;
@@ -117,13 +117,9 @@ export const Experiences: React.FC<ExperiencesProps> = ({
 
                 {!item.image && (
                   /* Vector SVG line illustration fallback */
-                  <svg
+                  <ExperienceArtSvg
+                    kind={item.art}
                     className="absolute right-3 bottom-0 w-44 h-28 stroke-current fill-none stroke-[1.2] opacity-85 group-hover:scale-105 transition-transform"
-                    viewBox="0 0 204 120"
-                    dangerouslySetInnerHTML={{
-                      __html: experienceArtSvg[item.art] || experienceArtSvg.city,
-                    }}
-                    aria-hidden="true"
                   />
                 )}
               </div>

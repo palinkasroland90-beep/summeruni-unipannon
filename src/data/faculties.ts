@@ -18,8 +18,7 @@ export const facultiesData: Record<string, Faculty> = {
         title: 'Finance & Final Pitch',
         description: 'Pricing, cash-flow modelling, investor readiness, company setup, and final team pitch (Modules 9–12).'
       }
-    ],
-    art: '<circle cx="205" cy="155" r="95"/><circle cx="205" cy="155" r="65"/><path d="M110 155h190M205 60v190M135 85l140 140M135 225l140-140"/><circle cx="205" cy="155" r="23"/>'
+    ]
   },
   mik: {
     name: 'Faculty of Information Technology',
@@ -38,8 +37,7 @@ export const facultiesData: Record<string, Faculty> = {
         title: 'Generative AI & Project',
         description: 'Prompt-based AI media creation (Day 09), followed by a hands-on multimedia project and quiz (Day 10).'
       }
-    ],
-    art: '<rect x="110" y="60" width="190" height="190" rx="15"/><circle cx="160" cy="120" r="18"/><circle cx="250" cy="120" r="18"/><path d="M140 190h130M205 60v50M160 138v52M250 138v52"/>'
+    ]
   },
   mk: {
     name: 'Faculty of Engineering',
@@ -58,8 +56,7 @@ export const facultiesData: Record<string, Faculty> = {
         title: 'Ceramics & Composites',
         description: 'Inorganic non-metallic materials (ceramics, glasses, binders) and composite matrix/disperse systems.'
       }
-    ],
-    art: '<circle cx="205" cy="155" r="80"/><path d="M205 45v30M205 235v30M95 155h30M285 155h30M127 77l21 21M263 213l21 21M127 233l21-21M263 97l21-21"/><circle cx="205" cy="155" r="40"/>'
+    ]
   },
   htk: {
     name: 'Faculty of Humanities',
@@ -78,7 +75,6 @@ export const facultiesData: Record<string, Faculty> = {
         title: 'Spontaneous Debate & Challenge',
         description: 'Think Fast, Speak Freely! and The Great English Challenge conclude with My Hungarian Experience talks and feedback.'
       }
-    ],
-    art: '<path d="M125 90c25 0 55 10 80 25 25-15 55-25 80-25v120c-25 0-55 10-80 25-25-15-55-25-80-25V90z"/><path d="M205 115v120"/><circle cx="205" cy="88" r="22"/><path d="M148 132c15 2 30 7 42 14M148 162c15 2 30 7 42 14M262 132c-15 2-30 7-42 14M262 162c-15 2-30 7-42 14"/>'
+    ]
   }
 };

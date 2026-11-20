@@ -27,7 +27,6 @@ export interface Faculty {
     title: string;
     description: string;
   }>;
-  art: string;
 }
 
 export interface DiscoveryItem {

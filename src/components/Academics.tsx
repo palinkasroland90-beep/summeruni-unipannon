@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { facultiesData } from '../data/faculties';
 import { Check, ArrowRight, BookOpen } from 'lucide-react';
+import { FacultyArtSvg, FacultyArtKey } from './DecorativeArt';
 
 interface AcademicsProps {
   onJumpToDay: (dayNumber: number) => void;
 }
 
-type FacultyKey = 'gtk' | 'mik' | 'mk' | 'htk';
+type FacultyKey = FacultyArtKey;
 
 const facultyBgColors: Record<FacultyKey, string> = {
   gtk: '#272945',
@@ -76,10 +77,9 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
             style={{ backgroundColor: facultyBgColors[activeFacultyKey] }}
           >
             {/* SVG Background Art */}
-            <svg
+            <FacultyArtSvg
+              facultyKey={activeFacultyKey}
               className="absolute right-[-20px] bottom-[-25px] w-[260px] h-[260px] sm:w-[300px] sm:h-[300px] stroke-white/20 fill-none stroke-[1.5] pointer-events-none"
-              viewBox="0 0 300 300"
-              dangerouslySetInnerHTML={{ __html: faculty.art }}
             />
 
             <div className="relative z-10">
