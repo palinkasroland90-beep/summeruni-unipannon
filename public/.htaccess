@@ -1,25 +1,42 @@
 # Disable directory listing
 Options -Indexes
 
-# SPA routing (Vue/React/Vite) — exclude real files, directories, and future /api/ backend endpoints
+# Block direct access to hidden dotfiles (.env, .git, .DS_Store, .htaccess, etc.)
+<FilesMatch "^\.">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# SPA routing (React/Vite) — block hidden directories (except /.well-known/) and exclude /api/
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
+
+  # Block access to hidden directories/files (e.g. /.git/, /.env) while preserving /.well-known/ for ACME/TLS
+  RewriteRule (^|/)\.(?!well-known(/|$)) - [F,L]
+
   RewriteRule ^index\.html$ - [L]
   RewriteCond %{REQUEST_URI} !^/api/
+  RewriteCond %{REQUEST_URI} !^/\.well-known/
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule . /index.html [L]
 </IfModule>
 
-# Security headers
+# Security headers (strict CSP: zero 'unsafe-inline', zero external CDNs, zero data: URIs)
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"
   Header always set X-Frame-Options "DENY"
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+  # Note: if Apache sits behind a TLS-terminating reverse proxy, configure HSTS at the proxy/VirtualHost level.
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" env=HTTPS
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; form-action 'self';"
 
   # Never cache index.html so new Vite hashed bundles load immediately
   <FilesMatch "^index\.html$">

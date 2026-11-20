@@ -9,11 +9,11 @@ interface AcademicsProps {
 
 type FacultyKey = FacultyArtKey;
 
-const facultyBgColors: Record<FacultyKey, string> = {
-  gtk: '#272945',
-  mik: '#72308C',
-  mk: '#8A221B',
-  htk: '#D03635',
+const facultyBgClasses: Record<FacultyKey, string> = {
+  gtk: 'bg-[#272945]',
+  mik: 'bg-[#72308C]',
+  mk: 'bg-[#8A221B]',
+  htk: 'bg-[#D03635]',
 };
 
 const facultyLogos: Record<FacultyKey, string> = {
@@ -73,8 +73,7 @@ export const Academics: React.FC<AcademicsProps> = ({ onJumpToDay }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 border-x border-b border-[#dce4e8] rounded-b-sm overflow-hidden shadow-sm">
           {/* Visual Left Banner */}
           <div
-            className="lg:col-span-5 text-white p-8 sm:p-12 relative flex flex-col justify-between overflow-hidden min-h-[320px] transition-colors duration-300"
-            style={{ backgroundColor: facultyBgColors[activeFacultyKey] }}
+            className={`lg:col-span-5 text-white p-8 sm:p-12 relative flex flex-col justify-between overflow-hidden min-h-[320px] transition-colors duration-300 ${facultyBgClasses[activeFacultyKey]}`}
           >
             {/* SVG Background Art */}
             <FacultyArtSvg

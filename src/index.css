@@ -77,3 +77,20 @@ textarea:focus-visible {
 .animate-fade-in {
   animation: fadeIn 0.25s ease-out forwards;
 }
+
+/* Hero background & DailyEssentials carousel transforms (strict CSP, zero inline styles) */
+.hero-balaton-bg {
+  background-image: linear-gradient(90deg, #04233e 0%, #ffffff00 100%), url('/images/hero-balaton.webp');
+}
+
+.carousel-slide-0 {
+  transform: translateX(0%);
+}
+
+.carousel-slide-1 {
+  transform: translateX(-100%);
+}
+
+.carousel-slide-2 {
+  transform: translateX(-200%);
+}

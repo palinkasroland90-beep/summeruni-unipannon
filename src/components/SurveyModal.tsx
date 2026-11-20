@@ -97,11 +97,11 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
       if (e.key === 'Escape') onClose();
     };
     if (isOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('overflow-hidden');
       window.addEventListener('keydown', handleKeyDown);
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('overflow-hidden');
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, onClose]);
@@ -159,7 +159,17 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
     if (step > 0) setStep(step - 1);
   };
 
-  const progressPercent = isCompleted ? 100 : Math.round(((step + 1) / totalSteps) * 100);
+  const progressWidthClass = isCompleted
+    ? 'w-full'
+    : totalSteps === 2
+      ? step === 0
+        ? 'w-1/2'
+        : 'w-full'
+      : step === 0
+        ? 'w-1/3'
+        : step === 1
+          ? 'w-2/3'
+          : 'w-full';
 
   return (
     <div
@@ -193,8 +203,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
         {/* Progress Bar */}
         <div className="w-full h-1.5 bg-[#e5edef] rounded-full overflow-hidden mb-6">
           <div
-            className="h-full bg-[#00b0b9] transition-all duration-300"
-            style={{ width: `${progressPercent}%` }}
+            className={`h-full bg-[#00b0b9] transition-all duration-300 ${progressWidthClass}`}
           />
         </div>
 

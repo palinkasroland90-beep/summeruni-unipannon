@@ -11,10 +11,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
     <section className="relative min-h-[640px] md:min-h-[700px] flex flex-col justify-between text-white overflow-hidden bg-[#143651]">
       {/* Background with subtle photo & dark overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `linear-gradient(90deg, #04233e 0%, #ffffff00 100%), url('/images/hero-balaton.webp')`,
-        }}
+        className="absolute inset-0 bg-cover bg-center hero-balaton-bg"
         aria-hidden="true"
       />
 

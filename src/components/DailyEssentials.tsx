@@ -49,6 +49,8 @@ const SLIDE_META: CarouselSlideMeta[] = [
   },
 ];
 
+const slideTransformClasses = ['carousel-slide-0', 'carousel-slide-1', 'carousel-slide-2'] as const;
+
 interface DailyEssentialsProps {
   activeSlideRequest?: { slide: number; nonce: number } | null;
 }
@@ -72,11 +74,11 @@ export const DailyEssentials: React.FC<DailyEssentialsProps> = ({ activeSlideReq
       if (e.key === 'Escape') setSelectedDish(null);
     };
     if (selectedDish) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('overflow-hidden');
       window.addEventListener('keydown', handleKeyDown);
     }
     return () => {
-      document.body.style.overflow = 'unset';
+      document.body.classList.remove('overflow-hidden');
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [selectedDish]);
@@ -199,8 +201,7 @@ export const DailyEssentials: React.FC<DailyEssentialsProps> = ({ activeSlideReq
           onTouchEnd={handleTouchEnd}
         >
           <div
-            className="flex transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+            className={`flex transition-transform duration-500 ease-out ${slideTransformClasses[activeSlide] ?? 'carousel-slide-0'}`}
           >
             {/* Slide 0: Recommended Accommodation */}
             <div
