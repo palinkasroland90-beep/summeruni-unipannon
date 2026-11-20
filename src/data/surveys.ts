@@ -77,39 +77,3 @@ export const accommodationChoices: SurveyOption[] = [
     desc: 'Lakeside resort hotel in Balatonkenese with private beach and wellness (Approx. HUF 50,000 / person / night).'
   }
 ];
-
-export const roomTypeOptions: SurveyOption[] = [
-  {
-    value: 'single',
-    label: 'Single Private Room',
-    desc: 'Private room for personal space and quiet rest between programme days.'
-  },
-  {
-    value: 'twin',
-    label: 'Shared Twin Room (2 students)',
-    desc: 'Budget-friendly twin room shared with a fellow summer university participant.'
-  },
-  {
-    value: 'flexible',
-    label: 'Flexible / Best Value',
-    desc: 'Open to either room setup depending on final group rates and availability.'
-  }
-];
-
-export const accommodationPriorityOptions: SurveyOption[] = [
-  {
-    value: 'budget',
-    label: 'Student-Friendly Budget',
-    desc: 'Keeping nightly accommodation costs as affordable as possible.'
-  },
-  {
-    value: 'proximity',
-    label: 'Walking Distance to Campus & City Centre',
-    desc: 'Easy foot access to lectures, cafes, and evening cultural events.'
-  },
-  {
-    value: 'comfort',
-    label: 'Hotel Comfort & Wellness',
-    desc: 'Higher-tier hotel amenities, lakeside views, or spa/wellness access.'
-  }
-];

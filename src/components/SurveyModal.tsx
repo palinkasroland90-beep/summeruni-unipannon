@@ -7,8 +7,6 @@ import {
   academicTrackOptions,
   learningFormatOptions,
   accommodationChoices,
-  roomTypeOptions,
-  accommodationPriorityOptions,
 } from '../data/surveys';
 import { SurveyKind } from '../types';
 
@@ -45,8 +43,6 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
 
   const [accommodationState, setAccommodationState] = useState({
     hotel: 'magister',
-    roomType: 'twin',
-    priority: 'proximity',
     comment: '',
   });
 
@@ -85,8 +81,6 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
           } else if (kind === 'accommodation') {
             setAccommodationState({
               hotel: parsed.hotel || 'magister',
-              roomType: parsed.roomType || 'twin',
-              priority: parsed.priority || 'proximity',
               comment: parsed.comment || '',
             });
           }
@@ -126,6 +120,8 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
     });
   };
 
+  const totalSteps = kind === 'accommodation' ? 2 : 3;
+
   const handleNext = () => {
     setErrorMessage('');
     if (kind === 'programme') {
@@ -135,7 +131,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
       }
     }
 
-    if (step < 2) {
+    if (step < totalSteps - 1) {
       setStep(step + 1);
     } else {
       // Save to localStorage
@@ -163,7 +159,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
     if (step > 0) setStep(step - 1);
   };
 
-  const progressPercent = isCompleted ? 100 : Math.round(((step + 1) / 3) * 100);
+  const progressPercent = isCompleted ? 100 : Math.round(((step + 1) / totalSteps) * 100);
 
   return (
     <div
@@ -207,7 +203,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
           <div>
             {/* Step Counter */}
             <div className="flex items-center justify-between text-xs text-[#657886] mb-3">
-              <span className="font-bold text-[#285780]">Step {step + 1} of 3</span>
+              <span className="font-bold text-[#285780]">Step {step + 1} of {totalSteps}</span>
               <span>Your responses stay in your local browser</span>
             </div>
 
@@ -492,82 +488,6 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
                 )}
 
                 {step === 1 && (
-                  <div className="space-y-5">
-                    <div>
-                      <h3 className="text-lg font-bold text-[#143651] mb-1">
-                        Preferred room setup
-                      </h3>
-                      <div className="space-y-2">
-                        {roomTypeOptions.map((opt) => (
-                          <label
-                            key={opt.value}
-                            className={`flex items-start gap-3 p-3 border rounded cursor-pointer text-xs ${
-                              accommodationState.roomType === opt.value
-                                ? 'border-[#00b0b9] bg-[#f1fbf9] font-medium'
-                                : 'border-[#cedce2] hover:bg-slate-50'
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              name="roomType"
-                              value={opt.value}
-                              checked={accommodationState.roomType === opt.value}
-                              onChange={() =>
-                                setAccommodationState({
-                                  ...accommodationState,
-                                  roomType: opt.value,
-                                })
-                              }
-                              className="mt-0.5 accent-[#285780]"
-                            />
-                            <div>
-                              <strong className="block text-[#143651]">{opt.label}</strong>
-                              <span className="text-[#657886] text-[11px]">{opt.desc}</span>
-                            </div>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div>
-                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#143651] mb-1">
-                        What matters most for your stay?
-                      </h4>
-                      <div className="space-y-2">
-                        {accommodationPriorityOptions.map((opt) => (
-                          <label
-                            key={opt.value}
-                            className={`flex items-start gap-3 p-3 border rounded cursor-pointer text-xs ${
-                              accommodationState.priority === opt.value
-                                ? 'border-[#00b0b9] bg-[#f1fbf9] font-medium'
-                                : 'border-[#cedce2] hover:bg-slate-50'
-                            }`}
-                          >
-                            <input
-                              type="radio"
-                              name="priority"
-                              value={opt.value}
-                              checked={accommodationState.priority === opt.value}
-                              onChange={() =>
-                                setAccommodationState({
-                                  ...accommodationState,
-                                  priority: opt.value,
-                                })
-                              }
-                              className="mt-0.5 accent-[#285780]"
-                            />
-                            <div>
-                              <strong className="block text-[#143651]">{opt.label}</strong>
-                              <span className="text-[#657886] text-[11px]">{opt.desc}</span>
-                            </div>
-                          </label>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {step === 2 && (
                   <div className="space-y-4">
                     <h3 className="text-xl font-bold text-[#143651]">
                       Stay requests & arrival notes
@@ -617,7 +537,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
                 onClick={handleNext}
                 className="inline-flex items-center gap-2 px-6 py-2.5 bg-[#285780] hover:bg-[#143651] text-white text-xs font-bold uppercase tracking-wider rounded shadow-sm"
               >
-                <span>{step === 2 ? 'Save Responses' : 'Continue'}</span>
+                <span>{step === totalSteps - 1 ? 'Save Responses' : 'Continue'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

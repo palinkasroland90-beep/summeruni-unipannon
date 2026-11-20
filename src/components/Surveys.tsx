@@ -138,7 +138,7 @@ export const Surveys: React.FC<SurveysProps> = ({
               </div>
 
               <p className="text-xs sm:text-sm text-[#657886] leading-relaxed mb-6">
-                Let us know your preferred stay option across our campus residence and partner hotels, your room setup, and what matters most for budget and location.
+                Let us know your preferred stay option across our campus residence and partner hotels, and share any arrival or stay notes.
               </p>
             </div>
 
@@ -149,7 +149,7 @@ export const Surveys: React.FC<SurveysProps> = ({
                   <span>Responses saved locally</span>
                 </div>
               ) : (
-                <span className="text-xs text-[#657886]">3 quick steps · ~2 mins</span>
+                <span className="text-xs text-[#657886]">2 quick steps · ~1 min</span>
               )}
 
               <button
