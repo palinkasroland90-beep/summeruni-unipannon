@@ -47,6 +47,8 @@ export interface DiscoveryItem {
   };
 }
 
+export type SurveyKind = 'programme' | 'academic' | 'accommodation';
+
 export interface SurveyState {
   interests: string[];
   pace: string;

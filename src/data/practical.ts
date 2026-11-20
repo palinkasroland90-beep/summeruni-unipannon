@@ -196,6 +196,30 @@ export const hungarianDishes: HungarianDish[] = [
       'Cook for 8–10 minutes until the peppers start to soften, then stir in the chopped tomatoes, salt, and pepper (plus sliced sausage if using).',
       'Simmer uncovered for 15–20 minutes until the sauce thickens and the vegetables are tender. Serve warm with fresh crusty bread, or fold in beaten eggs just before serving.'
     ]
+  },
+  {
+    id: 'toltott-kaposzta',
+    name: 'Töltött Káposzta',
+    subtitle: 'Hungarian Stuffed Cabbage Rolls',
+    description: 'Savory pork and rice rolls wrapped in pickled cabbage leaves, slow-simmered with sauerkraut, sweet paprika, and served with sour cream.',
+    image: '/images/dishes/toltott-kaposzta.webp',
+    prepTime: '110 mins',
+    servings: '6 servings',
+    ingredients: [
+      '12 large pickled cabbage leaves (savanyú káposzta) + 500 g shredded sauerkraut',
+      '500 g ground pork (or mixed pork & beef)',
+      '100 g short-grain rice, rinsed',
+      '1 medium onion, finely diced & 2 cloves garlic, minced',
+      '1 tbsp sweet Hungarian paprika + 1 tsp ground caraway, salt & black pepper',
+      '1 egg, 150 g smoked sausage or smoked pork ribs (optional)',
+      '1 L water or stock, fresh sour cream (tejföl) and crusty bread to serve'
+    ],
+    steps: [
+      'Sauté the diced onion lightly in a splash of oil, stir in half the paprika off the heat, then combine with the ground meat, rinsed rice, minced garlic, egg, caraway, salt, and pepper.',
+      'Trim any thick ribs from the pickled cabbage leaves, place a spoonful of filling at the base of each leaf, fold in the sides, and roll tightly.',
+      'Line a wide pot with half the shredded sauerkraut (and smoked meat if using), arrange the cabbage rolls snugly on top, cover with the remaining sauerkraut, sprinkle with the rest of the paprika, and pour in enough water to just cover.',
+      'Cover and simmer gently on low heat for 75–90 minutes until the rice and cabbage are tender. Serve hot topped with a generous spoonful of sour cream and fresh white bread.'
+    ]
   }
 ];
 

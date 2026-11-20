@@ -335,7 +335,7 @@ export const DailyEssentials: React.FC<DailyEssentialsProps> = ({ activeSlideReq
                       Typical Hungarian Dishes
                     </h3>
                     <p className="text-sm text-[#657886] mt-0.5">
-                      Five beloved Hungarian classics you can taste during the summer programme.
+                      Six beloved Hungarian classics you can taste during the summer programme.
                     </p>
                   </div>
                 </div>

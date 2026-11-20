@@ -1,16 +1,19 @@
 import React from 'react';
-import { ClipboardList, GraduationCap, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ClipboardList, GraduationCap, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
+import { SurveyKind } from '../types';
 
 interface SurveysProps {
-  onOpenSurvey: (kind: 'programme' | 'academic') => void;
+  onOpenSurvey: (kind: SurveyKind) => void;
   programmeCompleted: boolean;
   academicCompleted: boolean;
+  accommodationCompleted: boolean;
 }
 
 export const Surveys: React.FC<SurveysProps> = ({
   onOpenSurvey,
   programmeCompleted,
   academicCompleted,
+  accommodationCompleted,
 }) => {
   return (
     <section id="surveys" className="py-20 md:py-28 bg-[#edf5f6] border-b border-[#dce4e8]">
@@ -27,12 +30,12 @@ export const Surveys: React.FC<SurveysProps> = ({
             Your summer. <span className="text-[#285780]">Your point of view.</span>
           </h2>
           <p className="text-base text-[#657886] leading-relaxed">
-            Help us tailor the 2027 Summer University to your academic and travel aspirations. Take 2 minutes to share your preferred topics, pacing, and cultural highlights.
+            Help us tailor the 2027 Summer University to your academic, accommodation, and travel aspirations. Take 2 minutes to share your preferred topics, stays, pacing, and cultural highlights.
           </p>
         </div>
 
         {/* Survey Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Card 1: Programme Experience Survey */}
           <div className="bg-white border border-[#cfdee3] p-7 sm:p-9 rounded-sm flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
             <div>
@@ -112,6 +115,48 @@ export const Surveys: React.FC<SurveysProps> = ({
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00b0b9] hover:bg-[#007d83] text-[#093b49] hover:text-white text-xs font-bold tracking-wider uppercase transition-colors rounded-sm"
               >
                 <span>{academicCompleted ? 'Update Preferences' : 'Start Preferences'}</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          {/* Card 3: Accommodation Preferences Survey */}
+          <div className="bg-white border border-[#cfdee3] p-7 sm:p-9 rounded-sm flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow md:col-span-2 lg:col-span-1">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <span className="text-3xl font-light text-[#abc1cd] font-heading">03</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 border border-[#b9ced8] text-[#285780] rounded">
+                  Stays & Comfort
+                </span>
+              </div>
+
+              <div className="flex items-center gap-3 mb-3 text-[#285780]">
+                <Building2 className="w-6 h-6 text-[#00b0b9]" />
+                <h3 className="text-2xl font-bold text-[#143651] tracking-tight">
+                  Accommodation Preferences
+                </h3>
+              </div>
+
+              <p className="text-xs sm:text-sm text-[#657886] leading-relaxed mb-6">
+                Let us know your preferred stay option across our campus residence and partner hotels, your room setup, and what matters most for budget and location.
+              </p>
+            </div>
+
+            <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
+              {accommodationCompleted ? (
+                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#08796b]">
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>Responses saved locally</span>
+                </div>
+              ) : (
+                <span className="text-xs text-[#657886]">3 quick steps · ~2 mins</span>
+              )}
+
+              <button
+                onClick={() => onOpenSurvey('accommodation')}
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#143651] hover:bg-[#285780] text-white text-xs font-bold tracking-wider uppercase transition-colors rounded-sm"
+              >
+                <span>{accommodationCompleted ? 'Update Stay' : 'Start Survey'}</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </button>
             </div>

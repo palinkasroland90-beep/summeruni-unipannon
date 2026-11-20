@@ -12,7 +12,7 @@ import { Footer } from './components/Footer';
 import { SessionDetailModal } from './components/SessionDetailModal';
 import { SurveyModal } from './components/SurveyModal';
 import { Toast } from './components/Toast';
-import { Session, DiscoveryItem } from './types';
+import { Session, DiscoveryItem, SurveyKind } from './types';
 import { programmeData, weekdays, dayDates, dayThemes, categoryLabels } from './data/programme';
 
 export const App: React.FC = () => {
@@ -24,17 +24,19 @@ export const App: React.FC = () => {
     slide: number;
     nonce: number;
   } | null>(null);
-  const [surveyModalKind, setSurveyModalKind] = useState<'programme' | 'academic' | null>(null);
+  const [surveyModalKind, setSurveyModalKind] = useState<SurveyKind | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const [programmeCompleted, setProgrammeCompleted] = useState<boolean>(false);
   const [academicCompleted, setAcademicCompleted] = useState<boolean>(false);
+  const [accommodationCompleted, setAccommodationCompleted] = useState<boolean>(false);
 
   // Check initial localStorage status
   useEffect(() => {
     try {
       setProgrammeCompleted(!!localStorage.getItem('pannon-summer-2027-survey-programme'));
       setAcademicCompleted(!!localStorage.getItem('pannon-summer-2027-survey-academic'));
+      setAccommodationCompleted(!!localStorage.getItem('pannon-summer-2027-survey-accommodation'));
     } catch {
       // ignore
     }
@@ -133,9 +135,10 @@ ${eventLines}`;
     showToast('Programme schedule downloaded (.TXT)!');
   };
 
-  const handleSurveySuccess = (kind: 'programme' | 'academic') => {
+  const handleSurveySuccess = (kind: SurveyKind) => {
     if (kind === 'programme') setProgrammeCompleted(true);
     if (kind === 'academic') setAcademicCompleted(true);
+    if (kind === 'accommodation') setAccommodationCompleted(true);
     showToast('Your survey responses were saved locally!');
   };
 
@@ -182,6 +185,7 @@ ${eventLines}`;
           onOpenSurvey={(kind) => setSurveyModalKind(kind)}
           programmeCompleted={programmeCompleted}
           academicCompleted={academicCompleted}
+          accommodationCompleted={accommodationCompleted}
         />
       </main>
 

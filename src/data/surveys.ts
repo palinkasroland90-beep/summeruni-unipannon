@@ -54,3 +54,62 @@ export const learningFormatOptions: SurveyOption[] = [
   { value: 'lectures', label: 'Faculty Expert Lectures', desc: 'Deep-dive theoretical perspectives by senior European professors.' },
   { value: 'labs', label: 'Laboratory Visits & Demos', desc: 'Hands-on hardware, chemical lab instruments, and software demonstrations.' }
 ];
+
+export const accommodationChoices: SurveyOption[] = [
+  {
+    value: 'magister',
+    label: 'Hotel Magister (University Campus Residence)',
+    desc: 'Modern campus residence within walking distance of lecture halls (Approx. HUF 14,000 / person / night).'
+  },
+  {
+    value: 'historia',
+    label: 'Hotel História (Historic City Centre Boutique)',
+    desc: 'Four-star boutique hotel right below Veszprém Castle (Approx. HUF 25,000 / person / night).'
+  },
+  {
+    value: 'betekints',
+    label: 'Betekints Hotel Veszprém (Séd Valley Wellness)',
+    desc: 'Peaceful valley and wellness hotel beside the Séd stream and Zoo (indicative rate to be confirmed).'
+  },
+  {
+    value: 'marina-port',
+    label: 'Hotel Marina-Port (Lake Balaton Waterfront)',
+    desc: 'Lakeside resort hotel in Balatonkenese with private beach and wellness (Approx. HUF 50,000 / person / night).'
+  }
+];
+
+export const roomTypeOptions: SurveyOption[] = [
+  {
+    value: 'single',
+    label: 'Single Private Room',
+    desc: 'Private room for personal space and quiet rest between programme days.'
+  },
+  {
+    value: 'twin',
+    label: 'Shared Twin Room (2 students)',
+    desc: 'Budget-friendly twin room shared with a fellow summer university participant.'
+  },
+  {
+    value: 'flexible',
+    label: 'Flexible / Best Value',
+    desc: 'Open to either room setup depending on final group rates and availability.'
+  }
+];
+
+export const accommodationPriorityOptions: SurveyOption[] = [
+  {
+    value: 'budget',
+    label: 'Student-Friendly Budget',
+    desc: 'Keeping nightly accommodation costs as affordable as possible.'
+  },
+  {
+    value: 'proximity',
+    label: 'Walking Distance to Campus & City Centre',
+    desc: 'Easy foot access to lectures, cafes, and evening cultural events.'
+  },
+  {
+    value: 'comfort',
+    label: 'Hotel Comfort & Wellness',
+    desc: 'Higher-tier hotel amenities, lakeside views, or spa/wellness access.'
+  }
+];

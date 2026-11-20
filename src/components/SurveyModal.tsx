@@ -6,13 +6,17 @@ import {
   languageOptions,
   academicTrackOptions,
   learningFormatOptions,
+  accommodationChoices,
+  roomTypeOptions,
+  accommodationPriorityOptions,
 } from '../data/surveys';
+import { SurveyKind } from '../types';
 
 interface SurveyModalProps {
-  kind: 'programme' | 'academic' | null;
+  kind: SurveyKind | null;
   isOpen: boolean;
   onClose: () => void;
-  onSuccess: (kind: 'programme' | 'academic') => void;
+  onSuccess: (kind: SurveyKind) => void;
 }
 
 export const SurveyModal: React.FC<SurveyModalProps> = ({
@@ -39,6 +43,13 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
     comment: '',
   });
 
+  const [accommodationState, setAccommodationState] = useState({
+    hotel: 'magister',
+    roomType: 'twin',
+    priority: 'proximity',
+    comment: '',
+  });
+
   // Load existing saved values from localStorage if available
   useEffect(() => {
     if (kind && isOpen) {
@@ -57,7 +68,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
               language: parsed.language || 'yes',
               comment: parsed.comment || '',
             });
-          } else {
+          } else if (kind === 'academic') {
             const legacyTopicMap: Record<string, string> = {
               gtk: 'business',
               mk: 'engineering',
@@ -69,6 +80,13 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
             setAcademicState({
               topic: validTopics.includes(normalizedTopic) ? normalizedTopic : 'business',
               format: parsed.format || 'interactive',
+              comment: parsed.comment || '',
+            });
+          } else if (kind === 'accommodation') {
+            setAccommodationState({
+              hotel: parsed.hotel || 'magister',
+              roomType: parsed.roomType || 'twin',
+              priority: parsed.priority || 'proximity',
               comment: parsed.comment || '',
             });
           }
@@ -122,7 +140,12 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
     } else {
       // Save to localStorage
       try {
-        const payload = kind === 'programme' ? programmeState : academicState;
+        const payload =
+          kind === 'programme'
+            ? programmeState
+            : kind === 'academic'
+              ? academicState
+              : accommodationState;
         localStorage.setItem(
           `pannon-summer-2027-survey-${kind}`,
           JSON.stringify({ ...payload, submittedAt: new Date().toISOString() })
@@ -158,7 +181,9 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
           <span className="text-[10px] uppercase font-bold tracking-[0.16em] text-[#285780]">
             {kind === 'programme'
               ? 'SURVEY 01 // PROGRAMME & EXPERIENCE PREVIEW'
-              : 'SURVEY 02 // ACADEMIC & FACULTY PREFERENCES'}
+              : kind === 'academic'
+                ? 'SURVEY 02 // ACADEMIC & FACULTY PREFERENCES'
+                : 'SURVEY 03 // ACCOMMODATION & STAY PREFERENCES'}
           </span>
           <button
             onClick={onClose}
@@ -416,6 +441,147 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
                       }
                       rows={5}
                       placeholder="e.g. Interested in LLM deployment, green chemical synthesis, European carbon markets..."
+                      className="w-full p-3.5 border border-[#c1d4dd] rounded text-sm text-[#193c55] focus:border-[#00b0b9] focus:ring-1 focus:ring-[#00b0b9] outline-none"
+                    />
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* ACCOMMODATION SURVEY STEPS */}
+            {kind === 'accommodation' && (
+              <>
+                {step === 0 && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl sm:text-2xl font-bold text-[#143651]">
+                      Where would you prefer to stay?
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#657886]">
+                      Choose the recommended accommodation option that best fits your stay:
+                    </p>
+                    <div className="space-y-3 max-h-[320px] overflow-y-auto pr-1">
+                      {accommodationChoices.map((opt) => (
+                        <label
+                          key={opt.value}
+                          className={`flex items-start gap-3 p-4 border rounded cursor-pointer transition-all ${
+                            accommodationState.hotel === opt.value
+                              ? 'border-[#00b0b9] bg-[#f1fbf9]'
+                              : 'border-[#cedce2] hover:bg-slate-50'
+                          }`}
+                        >
+                          <input
+                            type="radio"
+                            name="hotel"
+                            value={opt.value}
+                            checked={accommodationState.hotel === opt.value}
+                            onChange={() =>
+                              setAccommodationState({ ...accommodationState, hotel: opt.value })
+                            }
+                            className="mt-1 accent-[#285780]"
+                          />
+                          <div>
+                            <strong className="block text-sm font-bold text-[#143651]">
+                              {opt.label}
+                            </strong>
+                            <p className="text-xs text-[#657886] mt-0.5">{opt.desc}</p>
+                          </div>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {step === 1 && (
+                  <div className="space-y-5">
+                    <div>
+                      <h3 className="text-lg font-bold text-[#143651] mb-1">
+                        Preferred room setup
+                      </h3>
+                      <div className="space-y-2">
+                        {roomTypeOptions.map((opt) => (
+                          <label
+                            key={opt.value}
+                            className={`flex items-start gap-3 p-3 border rounded cursor-pointer text-xs ${
+                              accommodationState.roomType === opt.value
+                                ? 'border-[#00b0b9] bg-[#f1fbf9] font-medium'
+                                : 'border-[#cedce2] hover:bg-slate-50'
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              name="roomType"
+                              value={opt.value}
+                              checked={accommodationState.roomType === opt.value}
+                              onChange={() =>
+                                setAccommodationState({
+                                  ...accommodationState,
+                                  roomType: opt.value,
+                                })
+                              }
+                              className="mt-0.5 accent-[#285780]"
+                            />
+                            <div>
+                              <strong className="block text-[#143651]">{opt.label}</strong>
+                              <span className="text-[#657886] text-[11px]">{opt.desc}</span>
+                            </div>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h4 className="text-xs font-bold uppercase tracking-wider text-[#143651] mb-1">
+                        What matters most for your stay?
+                      </h4>
+                      <div className="space-y-2">
+                        {accommodationPriorityOptions.map((opt) => (
+                          <label
+                            key={opt.value}
+                            className={`flex items-start gap-3 p-3 border rounded cursor-pointer text-xs ${
+                              accommodationState.priority === opt.value
+                                ? 'border-[#00b0b9] bg-[#f1fbf9] font-medium'
+                                : 'border-[#cedce2] hover:bg-slate-50'
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              name="priority"
+                              value={opt.value}
+                              checked={accommodationState.priority === opt.value}
+                              onChange={() =>
+                                setAccommodationState({
+                                  ...accommodationState,
+                                  priority: opt.value,
+                                })
+                              }
+                              className="mt-0.5 accent-[#285780]"
+                            />
+                            <div>
+                              <strong className="block text-[#143651]">{opt.label}</strong>
+                              <span className="text-[#657886] text-[11px]">{opt.desc}</span>
+                            </div>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {step === 2 && (
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold text-[#143651]">
+                      Stay requests & arrival notes
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#657886]">
+                      Share any roommate requests, accessibility needs, breakfast preferences, or early/late arrival plans:
+                    </p>
+                    <textarea
+                      value={accommodationState.comment}
+                      onChange={(e) =>
+                        setAccommodationState({ ...accommodationState, comment: e.target.value })
+                      }
+                      rows={5}
+                      placeholder="e.g. Would prefer a quiet twin room, arriving in Budapest on July 18 evening..."
                       className="w-full p-3.5 border border-[#c1d4dd] rounded text-sm text-[#193c55] focus:border-[#00b0b9] focus:ring-1 focus:ring-[#00b0b9] outline-none"
                     />
                   </div>
