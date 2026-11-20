@@ -225,6 +225,14 @@ export const hungarianDishes: HungarianDish[] = [
 
 export const recommendedAccommodations: AccommodationOption[] = [
   {
+    name: 'Akadémia Hotel Balatonfüred',
+    location: 'Balatonfüred · Lake Balaton',
+    category: 'Sport & Conference',
+    description: 'Four-star sport hotel in Balatonfüred offering twin-bedded double rooms (shared occupancy), buffet breakfast, and complimentary conference room access for group stays.',
+    url: 'https://akademiahotel.hu',
+    approxPrice: 'Approx. HUF 24,000 / person / night'
+  },
+  {
     name: 'Betekints Hotel Veszprém',
     location: 'Veszprém · Séd Valley',
     category: 'Wellness & Boutique',

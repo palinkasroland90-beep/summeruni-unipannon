@@ -62,6 +62,11 @@ export const accommodationChoices: SurveyOption[] = [
     desc: 'Modern campus residence within walking distance of lecture halls (Approx. HUF 14,000 / person / night).'
   },
   {
+    value: 'akademia',
+    label: 'Akadémia Hotel Balatonfüred (Lake Balaton Sport & Conference)',
+    desc: 'Four-star hotel in Balatonfüred with twin rooms, buffet breakfast, and conference room access (Approx. HUF 24,000 / person / night).'
+  },
+  {
     value: 'historia',
     label: 'Hotel História (Historic City Centre Boutique)',
     desc: 'Four-star boutique hotel right below Veszprém Castle (Approx. HUF 25,000 / person / night).'
