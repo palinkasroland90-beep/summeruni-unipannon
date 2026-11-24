@@ -3,7 +3,7 @@ import { Faculty } from '../types';
 export const facultiesData: Record<string, Faculty> = {
   gtk: {
     name: 'Faculty of Business and Economics',
-    text: 'Course: Starting a Business (2 hours/week · 3 credits). Learn the essential steps of launching a venture—from idea generation, market research, and customer-centric product design to Business Model Canvas, marketing strategy, financial planning, and funding. Apply your knowledge in a team startup project culminating in a closing business pitch.',
+    text: 'Course: Starting a Business (6 sessions · 4×45 mins). Learn the essential steps of launching a venture—from idea generation, market research, and customer-centric product design to Business Model Canvas, marketing strategy, financial planning, and funding. Apply your knowledge in a team startup project culminating in a closing business pitch.',
     meta: ['Idea Generation & MVP', 'Business Model Canvas', 'Financial Planning & Pitch'],
     features: [
       {
@@ -22,7 +22,7 @@ export const facultiesData: Record<string, Faculty> = {
   },
   mik: {
     name: 'Faculty of Information Technology',
-    text: 'Course: Fundamentals of Multimedia I (2 hours/week · 3 credits). Explore the core concepts, technologies, and applications of digital media—spanning human visual and auditory perception, digital image representation, image editing algorithms, and generative AI tools. Combine theory with creative hands-on project work.',
+    text: 'Course: Fundamentals of Multimedia I (6 sessions · 4×45 mins). Explore the core concepts, technologies, and applications of digital media—spanning human visual and auditory perception, digital image representation, image editing algorithms, and generative AI tools. Combine theory with creative hands-on project work.',
     meta: ['Digital Imaging & Pixels', 'Generative AI Media', 'Creative Project & Quiz'],
     features: [
       {
@@ -60,7 +60,7 @@ export const facultiesData: Record<string, Faculty> = {
   },
   htk: {
     name: 'Faculty of Humanities',
-    text: 'Summer English Communication Programme (6 training days · 42 lessons · A2 & B1 groups of 10–15 students). Boost spoken fluency, pronunciation, and confidence in everyday and academic communication through role-plays, debates, and excursion missions—beginning with the Placement & Speaking Challenge on Day 01.',
+    text: 'Course: Summer English Communication Programme (6 sessions · 7×45 mins). Boost spoken fluency, pronunciation, and confidence in A2 & B1 small groups (10–15 students) through role-plays, debates, and excursion missions—beginning with the Placement & Speaking Challenge on Day 01.',
     meta: ['Placement & Speaking Challenge', 'A2 & B1 Small Groups', 'Excursion Language Missions'],
     features: [
       {

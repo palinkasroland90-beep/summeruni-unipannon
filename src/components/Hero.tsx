@@ -37,7 +37,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
 
         {/* Description paragraph */}
         <p className="text-sm sm:text-base text-slate-200/90 max-w-[560px] leading-relaxed mb-8">
-          Join a 14-day international summer experience at the University of Pannonia. Combine rigorous lectures across business, engineering and computing with cultural expeditions, regional wine discovery, and lifelong global friendships.
+          Join a 14-day international summer experience at the University of Pannonia. Combine rigorous lectures across business, engineering, computing and humanities with cultural expeditions, regional wine discovery, and lifelong global friendships.
         </p>
 
         {/* Action buttons */}
@@ -94,7 +94,7 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProgramme, onExploreAcademi
           {/* Fact 3 */}
           <div className="p-5 sm:p-7 flex items-center gap-4">
             <span className="text-3xl sm:text-4xl md:text-[42px] font-light text-[#285780] tracking-tight">
-              03
+              04
             </span>
             <div className="text-xs leading-snug">
               <strong className="block text-[#193c55] font-bold">Faculty Perspectives</strong>

@@ -27,7 +27,7 @@ export const Intro: React.FC = () => {
           </p>
 
           <p>
-            From the historic Castle of Veszprém to the calm shores of Lake Balaton, every morning combines academic depth with afternoon cultural discoveries. Meet leading professors in business, informatics, and sustainable engineering, while connecting with Hungarian student mentors in a welcoming, safe international community.
+            From the historic Castle of Veszprém to the calm shores of Lake Balaton, every morning combines academic depth with afternoon cultural discoveries. Meet leading professors in business, informatics, sustainable engineering, and humanities, while connecting with Hungarian student mentors in a welcoming, safe international community.
           </p>
 
           <div className="pt-2">

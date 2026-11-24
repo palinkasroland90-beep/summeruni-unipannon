@@ -69,12 +69,7 @@ export const accommodationChoices: SurveyOption[] = [
   {
     value: 'historia',
     label: 'Hotel História (Historic City Centre Boutique)',
-    desc: 'Four-star boutique hotel right below Veszprém Castle (Approx. HUF 25,000 / person / night).'
-  },
-  {
-    value: 'betekints',
-    label: 'Betekints Hotel Veszprém (Séd Valley Wellness)',
-    desc: 'Peaceful valley and wellness hotel beside the Séd stream and Zoo (indicative rate to be confirmed).'
+    desc: 'Four-star boutique hotel right below Veszprém Castle (Approx. HUF 50,000 / person / night).'
   },
   {
     value: 'marina-port',

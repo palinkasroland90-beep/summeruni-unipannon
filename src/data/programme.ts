@@ -526,7 +526,7 @@ export const dayThemes = [
   "Discovering traditions",
   "Academic perspectives",
   "Balaton & reflections",
-  "Academic perspectives",
+  "Orientation & closing celebration",
   "A day in Budapest",
   "Farewell & departures"
 ];

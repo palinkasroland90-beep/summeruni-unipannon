@@ -233,19 +233,12 @@ export const recommendedAccommodations: AccommodationOption[] = [
     approxPrice: 'Approx. HUF 24,000 / person / night'
   },
   {
-    name: 'Betekints Hotel Veszprém',
-    location: 'Veszprém · Séd Valley',
-    category: 'Wellness & Boutique',
-    description: 'Peaceful valley hotel beside the Séd stream, minutes from the Veszprém Zoo and a scenic walk from the historic Castle District.',
-    url: 'https://betekints.hu'
-  },
-  {
     name: 'Hotel História',
     location: 'Veszprém · City Centre',
     category: 'Historic Boutique',
     description: 'Four-star boutique hotel and renowned Historante restaurant nestled directly beneath the Veszprém Castle walls.',
     url: 'https://hotelhistoria.hu',
-    approxPrice: 'Approx. HUF 25,000 / person / night'
+    approxPrice: 'Approx. HUF 50,000 / person / night'
   },
   {
     name: 'Hotel Magister',

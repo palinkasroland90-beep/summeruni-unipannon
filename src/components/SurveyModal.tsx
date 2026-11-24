@@ -79,8 +79,9 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
               comment: parsed.comment || '',
             });
           } else if (kind === 'accommodation') {
+            const validHotels = ['magister', 'akademia', 'historia', 'marina-port'];
             setAccommodationState({
-              hotel: parsed.hotel || 'magister',
+              hotel: validHotels.includes(parsed.hotel) ? parsed.hotel : 'magister',
               comment: parsed.comment || '',
             });
           }
@@ -445,7 +446,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
                         setAcademicState({ ...academicState, comment: e.target.value })
                       }
                       rows={5}
-                      placeholder="e.g. Interested in LLM deployment, green chemical synthesis, European carbon markets..."
+                      placeholder="e.g. Interested in LLM deployment, green materials, European business, English communication..."
                       className="w-full p-3.5 border border-[#c1d4dd] rounded text-sm text-[#193c55] focus:border-[#00b0b9] focus:ring-1 focus:ring-[#00b0b9] outline-none"
                     />
                   </div>
