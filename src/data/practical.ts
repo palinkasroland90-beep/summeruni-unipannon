@@ -233,6 +233,14 @@ export const recommendedAccommodations: AccommodationOption[] = [
     approxPrice: 'Approx. HUF 24,000 / person / night'
   },
   {
+    name: 'Gizella Hotel Veszprém',
+    location: 'Veszprém · Séd Valley',
+    category: 'Hotel & Restaurant',
+    description: 'Three-star hotel and restaurant in Veszprém offering air-conditioned double rooms with breakfast, free Wi-Fi and parking, plus complimentary meeting room use for group stays.',
+    url: 'https://www.hotelgizella.hu',
+    approxPrice: 'Approx. HUF 25,000 / person / night'
+  },
+  {
     name: 'Hotel História',
     location: 'Veszprém · City Centre',
     category: 'Historic Boutique',

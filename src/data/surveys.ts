@@ -67,6 +67,11 @@ export const accommodationChoices: SurveyOption[] = [
     desc: 'Four-star hotel in Balatonfüred with twin rooms, buffet breakfast, and conference room access (Approx. HUF 24,000 / person / night).'
   },
   {
+    value: 'gizella',
+    label: 'Gizella Hotel Veszprém (Three-Star Hotel & Restaurant)',
+    desc: 'Three-star hotel in Veszprém with air-conditioned double rooms, breakfast, free Wi-Fi, and meeting room access (Approx. HUF 25,000 / person / night).'
+  },
+  {
     value: 'historia',
     label: 'Hotel História (Historic City Centre Boutique)',
     desc: 'Four-star boutique hotel right below Veszprém Castle (Approx. HUF 50,000 / person / night).'

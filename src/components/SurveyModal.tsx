@@ -79,7 +79,7 @@ export const SurveyModal: React.FC<SurveyModalProps> = ({
               comment: parsed.comment || '',
             });
           } else if (kind === 'accommodation') {
-            const validHotels = ['magister', 'akademia', 'historia', 'marina-port'];
+            const validHotels = ['magister', 'akademia', 'gizella', 'historia', 'marina-port'];
             setAccommodationState({
               hotel: validHotels.includes(parsed.hotel) ? parsed.hotel : 'magister',
               comment: parsed.comment || '',
