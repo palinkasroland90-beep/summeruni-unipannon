@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Intro } from './components/Intro';
@@ -10,9 +10,8 @@ import { Practical } from './components/Practical';
 import { Surveys } from './components/Surveys';
 import { Footer } from './components/Footer';
 import { SessionDetailModal } from './components/SessionDetailModal';
-import { SurveyModal } from './components/SurveyModal';
 import { Toast } from './components/Toast';
-import { Session, DiscoveryItem, SurveyKind } from './types';
+import { Session, DiscoveryItem } from './types';
 import { programmeData, weekdays, dayDates, dayThemes, categoryLabels } from './data/programme';
 
 export const App: React.FC = () => {
@@ -24,23 +23,7 @@ export const App: React.FC = () => {
     slide: number;
     nonce: number;
   } | null>(null);
-  const [surveyModalKind, setSurveyModalKind] = useState<SurveyKind | null>(null);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
-
-  const [programmeCompleted, setProgrammeCompleted] = useState<boolean>(false);
-  const [academicCompleted, setAcademicCompleted] = useState<boolean>(false);
-  const [accommodationCompleted, setAccommodationCompleted] = useState<boolean>(false);
-
-  // Check initial localStorage status
-  useEffect(() => {
-    try {
-      setProgrammeCompleted(!!localStorage.getItem('pannon-summer-2027-survey-programme'));
-      setAcademicCompleted(!!localStorage.getItem('pannon-summer-2027-survey-academic'));
-      setAccommodationCompleted(!!localStorage.getItem('pannon-summer-2027-survey-accommodation'));
-    } catch {
-      // ignore
-    }
-  }, []);
 
   const showToast = (msg: string) => {
     setToastMessage(msg);
@@ -135,13 +118,6 @@ ${eventLines}`;
     showToast('Programme schedule downloaded (.TXT)!');
   };
 
-  const handleSurveySuccess = (kind: SurveyKind) => {
-    if (kind === 'programme') setProgrammeCompleted(true);
-    if (kind === 'academic') setAcademicCompleted(true);
-    if (kind === 'accommodation') setAccommodationCompleted(true);
-    showToast('Your survey responses were saved locally!');
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#193c55] selection:bg-[#00b0b9]/30">
       {/* Navigation */}
@@ -181,12 +157,7 @@ ${eventLines}`;
         <Practical onViewAccommodation={handleViewAccommodation} />
 
         {/* Interactive Student Surveys */}
-        <Surveys
-          onOpenSurvey={(kind) => setSurveyModalKind(kind)}
-          programmeCompleted={programmeCompleted}
-          academicCompleted={academicCompleted}
-          accommodationCompleted={accommodationCompleted}
-        />
+        <Surveys />
       </main>
 
       {/* Footer */}
@@ -203,14 +174,6 @@ ${eventLines}`;
           setSelectedExperience(null);
         }}
         onJumpToDay={handleJumpToDay}
-      />
-
-      {/* Survey Wizard Modal */}
-      <SurveyModal
-        kind={surveyModalKind}
-        isOpen={!!surveyModalKind}
-        onClose={() => setSurveyModalKind(null)}
-        onSuccess={handleSurveySuccess}
       />
 
       {/* Action Notification Toast */}

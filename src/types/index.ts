@@ -45,15 +45,3 @@ export interface DiscoveryItem {
     sourceUrl: string;
   };
 }
-
-export type SurveyKind = 'programme' | 'academic' | 'accommodation';
-
-export interface SurveyState {
-  interests: string[];
-  pace: string;
-  language: string;
-  comment: string;
-  topic: string;
-  format: string;
-  date?: string;
-}

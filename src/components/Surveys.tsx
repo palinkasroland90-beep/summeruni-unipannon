@@ -1,20 +1,16 @@
 import React from 'react';
-import { ClipboardList, GraduationCap, Building2, CheckCircle2, ArrowRight } from 'lucide-react';
-import { SurveyKind } from '../types';
+import { ClipboardList, GraduationCap, Building2, ArrowUpRight } from 'lucide-react';
 
-interface SurveysProps {
-  onOpenSurvey: (kind: SurveyKind) => void;
-  programmeCompleted: boolean;
-  academicCompleted: boolean;
-  accommodationCompleted: boolean;
-}
+const SURVEY_FORMS = {
+  programme:
+    'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=UpB71-iEOk62H9H5oD0KirtoU2ySpA9DppKsWZhnVENUQVdFN1U1OE5LQ1VVUTlWRVVGN1haVDMxRy4u',
+  academic:
+    'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=UpB71-iEOk62H9H5oD0KirtoU2ySpA9DppKsWZhnVENUQUUzSzQwOFlGT0VYQVFBTUw2V0VFOFQwNi4u',
+  accommodation:
+    'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=UpB71-iEOk62H9H5oD0KirtoU2ySpA9DppKsWZhnVENUQ1c4S0VBTTlLWUJRTEFYTFA4VTcyRkJHTS4u',
+} as const;
 
-export const Surveys: React.FC<SurveysProps> = ({
-  onOpenSurvey,
-  programmeCompleted,
-  academicCompleted,
-  accommodationCompleted,
-}) => {
+export const Surveys: React.FC = () => {
   return (
     <section id="surveys" className="py-20 md:py-28 bg-[#edf5f6] border-b border-[#dce4e8]">
       <div className="shell">
@@ -59,22 +55,17 @@ export const Surveys: React.FC<SurveysProps> = ({
             </div>
 
             <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
-              {programmeCompleted ? (
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#08796b]">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>Responses saved locally</span>
-                </div>
-              ) : (
-                <span className="text-xs text-[#657886]">3 quick steps · ~2 mins</span>
-              )}
+              <span className="text-xs text-[#657886]">Opens Microsoft Forms · ~2 mins</span>
 
-              <button
-                onClick={() => onOpenSurvey('programme')}
+              <a
+                href={SURVEY_FORMS.programme}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#285780] hover:bg-[#143651] text-white text-xs font-bold tracking-wider uppercase transition-colors rounded-sm"
               >
-                <span>{programmeCompleted ? 'Update Survey' : 'Start Survey'}</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+                <span>Start Survey</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
@@ -101,22 +92,17 @@ export const Surveys: React.FC<SurveysProps> = ({
             </div>
 
             <div className="pt-6 border-t border-slate-200 flex items-center justify-between">
-              {academicCompleted ? (
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#08796b]">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>Responses saved locally</span>
-                </div>
-              ) : (
-                <span className="text-xs text-[#657886]">3 quick steps · ~2 mins</span>
-              )}
+              <span className="text-xs text-[#657886]">Opens Microsoft Forms · ~2 mins</span>
 
-              <button
-                onClick={() => onOpenSurvey('academic')}
+              <a
+                href={SURVEY_FORMS.academic}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#00b0b9] hover:bg-[#007d83] text-[#093b49] hover:text-white text-xs font-bold tracking-wider uppercase transition-colors rounded-sm"
               >
-                <span>{academicCompleted ? 'Update Preferences' : 'Start Preferences'}</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+                <span>Start Preferences</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
 
@@ -143,22 +129,17 @@ export const Surveys: React.FC<SurveysProps> = ({
             </div>
 
             <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
-              {accommodationCompleted ? (
-                <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#08796b]">
-                  <CheckCircle2 className="w-4 h-4" />
-                  <span>Responses saved locally</span>
-                </div>
-              ) : (
-                <span className="text-xs text-[#657886]">2 quick steps · ~1 min</span>
-              )}
+              <span className="text-xs text-[#657886]">Opens Microsoft Forms · ~1 min</span>
 
-              <button
-                onClick={() => onOpenSurvey('accommodation')}
+              <a
+                href={SURVEY_FORMS.accommodation}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#143651] hover:bg-[#285780] text-white text-xs font-bold tracking-wider uppercase transition-colors rounded-sm"
               >
-                <span>{accommodationCompleted ? 'Update Stay' : 'Start Survey'}</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </button>
+                <span>Start Survey</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>
